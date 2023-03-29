@@ -1,0 +1,132 @@
+# Compile of Address_decode.v was successful.
+# Compile of RISC_V_Single_Cycle.v was successful.
+# Compile of PCH.v was successful.
+# Compile of RISC_V.v was successful.
+# Compile of memoryAddress_decode.v was successful.
+# Compile of Instruction_Memory.v was successful.
+# Compile of Data_Memory.v was successful.
+# Compile of RISC_V_Single_Cycle_tb.v was successful.
+# Compile of UART_Rx.v was successful.
+# Compile of UART_TxRx.v was successful.
+# Compile of UART_Rx_TB.v was successful.
+# Compile of controlUnit.v was successful.
+# Compile of UART_Tx.v was successful.
+# Compile of FSM_UART_Tx.v was successful.
+# Compile of Bit_Rate_Pulse.v was successful.
+# Compile of Counter_Param.v was successful.
+# Compile of debouncer.v was successful.
+# Compile of decoder_bin_hex_7seg.v was successful.
+# Compile of Delayer.v was successful.
+# Compile of FF_D_enable.v was successful.
+# Compile of FSM_Debouncer.v was successful.
+# Compile of FSM_UART_Rx.v was successful.
+# Compile of Heard_Bit.v was successful.
+# Compile of Shift_Register_R_Param_Rx.v was successful.
+# Compile of clk_9600bauds.v was successful.
+# Compile of GPIO.v was successful.
+# Compile of InstructionData_Memory.v was successful.
+# Compile of ImmediateDecode.v was successful.
+# Compile of ALU.v was successful.
+# Compile of clk_1Hz.v was successful.
+# Compile of Mux_3in_1out.v was successful.
+# Compile of signExtend.v was successful.
+# Compile of Mux_4in_1out.v was successful.
+# Compile of Mux_2in_1out.v was successful.
+# Compile of programCounter_decode.v was successful.
+# Compile of RISC_V_tb.v was successful.
+# Compile of programCounter.v was successful.
+# Compile of BranchAddress.v was successful.
+# Compile of ALU_TB.v was successful.
+# Compile of MIPS.v was successful.
+# Compile of MIPS_tb.v was successful.
+# Compile of register.v was successful.
+# Compile of Mux_4in_1out_TB.v was successful.
+# Compile of Mux_2in_1out_TB.v was successful.
+# Compile of RegisterFile.v was successful.
+# Compile of zeroExtend.v was successful.
+# Compile of ALUDecoder.v was successful.
+# Compile of Counter.v was successful.
+# Compile of BinaryToHexadecimal.v was successful.
+# Compile of parity.v was successful.
+# Compile of Mux_Tx.v was successful.
+# Compile of Shift_Register_R_Param.v was successful.
+# Compile of ascii_2_7_seg.v was successful.
+# Compile of Reg_Param.v was successful.
+# 54 compiles, 0 failed with no errors.
+vsim -voptargs=+acc work.RISC_V_Single_Cycle_tb
+# vsim -voptargs="+acc" work.RISC_V_Single_Cycle_tb 
+# Start time: 20:43:09 on Mar 28,2023
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "controlUnit(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "FSM_UART_Tx(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "FSM_UART_Rx(fast)".
+# ** Warning: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/UART_Tx.v(57): (vopt-2685) [TFMPC] - Too few port connections for 'BR_pulse'.  Expected 5, found 4.
+# ** Warning: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/UART_Tx.v(57): (vopt-2718) [TFMPC] - Missing connection for port 'end_half_time'.
+# ** Warning: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/UART_Tx.v(91): (vopt-2685) [TFMPC] - Too few port connections for 'Shifter'.  Expected 7, found 6.
+# ** Warning: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/UART_Tx.v(91): (vopt-2718) [TFMPC] - Missing connection for port 'shifter'.
+# ** Warning: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/RISC_V_Single_Cycle_tb.v(8): (vopt-2685) [TFMPC] - Too few port connections for 'UUT'.  Expected 12, found 6.
+# ** Warning: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/RISC_V_Single_Cycle_tb.v(8): (vopt-2718) [TFMPC] - Missing connection for port 'HEX3'.
+# ** Warning: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/RISC_V_Single_Cycle_tb.v(8): (vopt-2718) [TFMPC] - Missing connection for port 'HEX2'.
+# ** Warning: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/RISC_V_Single_Cycle_tb.v(8): (vopt-2718) [TFMPC] - Missing connection for port 'HEX0'.
+# ** Warning: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/RISC_V_Single_Cycle_tb.v(8): (vopt-2718) [TFMPC] - Missing connection for port 'heard_bit_out'.
+# ** Warning: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/RISC_V_Single_Cycle_tb.v(8): (vopt-2718) [TFMPC] - Missing connection for port 'parity'.
+# ** Warning: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/RISC_V_Single_Cycle_tb.v(8): (vopt-2718) [TFMPC] - Missing connection for port 'clk_out'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=11.
+# Loading work.RISC_V_Single_Cycle_tb(fast)
+# Loading work.RISC_V_Single_Cycle(fast)
+# Loading work.RISC_V(fast)
+# Loading work.programCounter(fast)
+# Loading work.Mux_2in_1out(fast)
+# Loading work.register(fast)
+# Loading work.Mux_2in_1out(fast__1)
+# Loading work.Mux_3in_1out(fast)
+# Loading work.RegisterFile(fast)
+# Loading work.signExtend(fast)
+# Loading work.ImmediateDecode(fast)
+# Loading work.Mux_4in_1out(fast)
+# Loading work.ALU(fast)
+# Loading work.controlUnit(fast)
+# Loading work.PCH(fast)
+# Loading work.Address_decode(fast)
+# Loading work.Instruction_Memory(fast)
+# Loading work.Data_Memory(fast)
+# Loading work.GPIO(fast)
+# Loading work.UART_TxRx(fast)
+# Loading work.UART_Rx(fast)
+# Loading work.register(fast__1)
+# Loading work.Shift_Register_R_Param_Rx(fast)
+# Loading work.Reg_Param(fast)
+# Loading work.FF_D_enable(fast)
+# Loading work.Bit_Rate_Pulse(fast)
+# Loading work.FSM_UART_Rx(fast)
+# Loading work.Counter_Param(fast)
+# Loading work.Heard_Bit(fast)
+# Loading work.ascii_2_7_seg(fast)
+# Loading work.decoder_bin_hex_7seg(fast)
+# Loading work.UART_Tx(fast)
+# Loading work.register(fast__2)
+# Loading work.Shift_Register_R_Param(fast)
+# Loading work.parity(fast)
+# Loading work.Counter_Param(fast__1)
+# Loading work.Mux_Tx(fast)
+# Loading work.FSM_UART_Tx(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (32) for port 'addr'. The port definition is at: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Instruction_Memory.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /RISC_V_Single_Cycle_tb/UUT/Instruction_Memory_TOP File: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/RISC_V_Single_Cycle.v Line: 87
+# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (32) for port 'addr'. The port definition is at: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Data_Memory.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /RISC_V_Single_Cycle_tb/UUT/Data_Memory_TOP File: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/RISC_V_Single_Cycle.v Line: 95
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (8) for port 'Rx_SR'. The port definition is at: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/UART_TxRx.v(6).
+#    Time: 0 ns  Iteration: 0  Instance: /RISC_V_Single_Cycle_tb/UUT/UART_TOP File: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/RISC_V_Single_Cycle.v Line: 115
+add wave -position insertpoint  \
+sim:/RISC_V_Single_Cycle_tb/clk \
+sim:/RISC_V_Single_Cycle_tb/reset \
+sim:/RISC_V_Single_Cycle_tb/tx \
+sim:/RISC_V_Single_Cycle_tb/rx
+run
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 65 of file "Instruction_set.txt". (Current address [64], address range [0:63])    : A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Instruction_Memory.v(12)
+#    Time: 0 ns  Iteration: 0  Instance: /RISC_V_Single_Cycle_tb/UUT/Instruction_Memory_TOP
+run
+run
+run
+run
+run
+run
