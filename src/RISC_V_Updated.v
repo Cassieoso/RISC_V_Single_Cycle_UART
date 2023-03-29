@@ -95,7 +95,7 @@ RegisterFile #(.DATA_WIDTH(LENGTH), .ADDR_WIDTH(5)) RegisterFile_TOP(
     .A1(HRDATA[19:15]),
     .A2(HRDATA[24:20]),
     .A3(RegisterFile_A3_w),
-    .WD3(),				//Debe venir del ultimo mux, aun no agregado
+    .WD3(ALU_DataMem_mux),				//Debe venir del ultimo mux, aun no agregado
     .WE3(RegWrite),	//Debe venir de la control unit
     .RD1(RegisterFile_RD1_w),                     
     .RD2(RegisterFile_RD2_w)
@@ -155,5 +155,7 @@ ControlUnit_SC ControlUnit(
 	 .immediateSel(immediateSel),
     .ALUOp(ALUOp)
 );
+
+assign PCSrc = zero & Branch;
 
 endmodule

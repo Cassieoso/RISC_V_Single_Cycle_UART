@@ -35,7 +35,7 @@ localparam LW	= 7'b0000011;
 localparam SW	=	3'b010;
 
 
-always @(opCode)
+always @*
 	begin
 		if (rst) 
 					begin

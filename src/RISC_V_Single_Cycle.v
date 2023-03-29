@@ -88,7 +88,8 @@ Instruction_Memory Instruction_Memory_TOP (
     .clk(clk),
     .addr(HADDR_decoded),
     .data(HWDATA),
-    .we(1'b0)
+    .we(1'b0),
+	 .RD(HRDATA_IN_INSTR_MEMORY)
     );
 	 
 Data_Memory Data_Memory_TOP (	//En la presentacion aparece un MemRead pero menciona que es lectura asincrona

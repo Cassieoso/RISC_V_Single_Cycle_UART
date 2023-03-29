@@ -18,7 +18,7 @@ localparam SLT_FN	= 3'b010;
 localparam SLTU_FN = 3'b011;
 reg [2:0] ALUFunctions_o;
 
-always @(ALUControl) 
+always @*
     begin
         if(rst)
             ALUFunctions_o <= 3'b000;       
@@ -48,7 +48,7 @@ always @(ALUControl)
             endcase
     end
 
-always @(ALUOp) 
+always @*
     begin
         case (ALUOp)
             3'b000:
