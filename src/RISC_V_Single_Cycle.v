@@ -40,15 +40,15 @@ wire HRDATA_IN_UART_BUSY;
 wire HRDATA_IN_UART_READY;
 
 
-RISC_V #(.LENGTH(32)) RISC_V_TOP(
+RISC_V_Updated #(.LENGTH(32)) RISC_V_TOP(
     .clock(clk),
 	 .reset(reset),
 //	 .enable_WRITE(enable_WRITE),
 	 .HRDATA(HRDATA_OUT),
 //	 .ALUResult_Reg_w(HADDR),
-	 .RegisterFile_RD2_reg_w(HWDATA),
+	 .RegisterFile_RD2_w(HWDATA),
 	 .MemWrite(MemWrite),
-	 .MUX1_Output_w(HADDR)
+	 .HADDR(HADDR)
 //	 .memoryAddress_decode_w(HADDR)
     );
 
@@ -77,7 +77,7 @@ PCH PCH_TOP(
     );
 	 
 Address_decode  #(.LENGTH(32)) Address_decode_TOP(
-    .clock(clock),
+    .clock(clk),
     .reset(reset),
     .enable(1'b1),                   //This enable has to come from FSM
     .D(HADDR),
@@ -88,11 +88,10 @@ Instruction_Memory Instruction_Memory_TOP (
     .clk(clk),
     .addr(HADDR_decoded),
     .data(HWDATA),
-    .we(enable_MemWrite),
-    .RD(HRDATA_IN_INSTR_MEMORY)
+    .we(1'b0)
     );
 	 
-Data_Memory Data_Memory_TOP (
+Data_Memory Data_Memory_TOP (	//En la presentacion aparece un MemRead pero menciona que es lectura asincrona
     .clk(clk),
     .addr(HADDR_decoded),
     .data(HWDATA),

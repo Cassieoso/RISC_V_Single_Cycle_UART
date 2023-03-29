@@ -98,10 +98,14 @@ set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
 set_global_assignment -name VERILOG_FILE ../src/RISC_V_Single_Cycle.v
 set_global_assignment -name VERILOG_FILE ../src/RISC_V_Single_Cycle_tb.v
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name VERILOG_FILE ../src/Instruction_Memory.v
 set_global_assignment -name VERILOG_FILE ../src/Data_Memory.v
 set_global_assignment -name VERILOG_FILE ../src/Address_decode.v
+set_global_assignment -name VERILOG_FILE ../src/RISC_V_Updated.v
+set_global_assignment -name VERILOG_FILE ../src/Adder_param.v
+set_global_assignment -name VERILOG_FILE ../src/ALU_Control.v
+set_global_assignment -name VERILOG_FILE ../src/ControlUnit_SC.v
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
