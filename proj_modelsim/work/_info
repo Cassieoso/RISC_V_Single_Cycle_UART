@@ -11,24 +11,24 @@ z2
 cModel Technology
 dA:/intelFPGA_lite/21.1
 T_opt
-!s110 1680057790
-VIoLQaQ>[FBd<D1fJfa_GV0
+!s110 1680058623
+V:aV0]L8<j4H:@D_f^3>OT2
 04 22 4 work RISC_V_Single_Cycle_tb fast 0
-=1-089798a8a1bd-6423a5be-109-31cc
+=1-089798a8a1bd-6423a8fe-35e-2e88
 !s124 OEM10U48 
 o-quiet -auto_acc_if_foreign -work work +acc
 Z0 tCvgOpt 0
 n@_opt
 OL;O;2021.2;73
 vAddress_decode
-Z1 !s110 1680057763
+Z1 !s110 1680058603
 !i10b 1
 !s100 ijH4J4KKV1mMBD5l9kR=T3
-I4<e5a42jCQn9N00P5[=_V3
-Z2 dA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/proj_modelsim
+I7GY5ZKk5enM4LG:QSUlFl0
+Z2 dA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/proj_modelsim
 w1680057281
-8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Address_decode.v
-FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Address_decode.v
+8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Address_decode.v
+FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Address_decode.v
 !i122 0
 L0 1 30
 Z3 VDg1SIo80bB@j0V0VzS_@n1
@@ -36,420 +36,420 @@ Z4 OL;L;2021.2;73
 r1
 !s85 0
 31
-Z5 !s108 1680057763.000000
-!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Address_decode.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Address_decode.v|
+Z5 !s108 1680058603.000000
+!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Address_decode.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Address_decode.v|
 !i113 0
 Z6 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R0
 n@address_decode
 vALU
-Z7 !s110 1680057766
+R1
 !i10b 1
 !s100 nNDPC1G_=5mlFhiKz=1CB3
-I:48o[n^T:N;o:a`5Y8<SF1
+IGc3X;noej;EjCJ7d^bSbH0
 R2
 w1678337874
-8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/ALU.v
-FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/ALU.v
-!i122 28
+8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/ALU.v
+FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/ALU.v
+!i122 1
 L0 1 47
 R3
 R4
 r1
 !s85 0
 31
-Z8 !s108 1680057766.000000
-!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/ALU.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/ALU.v|
+R5
+!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/ALU.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/ALU.v|
 !i113 0
 R6
 R0
 n@a@l@u
 vALU_TB
-Z9 !s110 1680057767
+R1
 !i10b 1
 !s100 NA71He=3cUAPD0KDS6l@62
-IRASKWlDS:Q=O7g6g`C?2_0
+I]?_Eo<:JO]Cc]_0bQG73U1
 R2
 w1669150257
-8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/ALU_TB.v
-FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/ALU_TB.v
-!i122 38
-Z10 L0 1 31
+8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/ALU_TB.v
+FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/ALU_TB.v
+!i122 2
+Z7 L0 1 31
 R3
 R4
 r1
 !s85 0
 31
-Z11 !s108 1680057767.000000
-!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/ALU_TB.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/ALU_TB.v|
+R5
+!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/ALU_TB.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/ALU_TB.v|
 !i113 0
 R6
 R0
 n@a@l@u_@t@b
 vALUDecoder
-R9
+R1
 !i10b 1
 !s100 ]WT7gADTOFmkMb9A_97_H1
-Io1h3lL1:znE^en^0@dMeO2
+IW0IV<STKnj9Na7eBg;0zJ0
 R2
 w1669004847
-8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/ALUDecoder.v
-FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/ALUDecoder.v
-!i122 46
-Z12 L0 1 51
+8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/ALUDecoder.v
+FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/ALUDecoder.v
+!i122 3
+Z8 L0 1 51
 R3
 R4
 r1
 !s85 0
 31
-R11
-!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/ALUDecoder.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/ALUDecoder.v|
+R5
+!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/ALUDecoder.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/ALUDecoder.v|
 !i113 0
 R6
 R0
 n@a@l@u@decoder
 vascii_2_7_seg
-Z13 !s110 1680057768
+R1
 !i10b 1
 !s100 _ed8?ZEQ]e[@M32C?YL5;3
-IIYUYFX9H5Mf`col6R`lUB3
+I]X2DZjeRPZE:LO]d;Wd[g2
 R2
 w1666145268
-8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/ascii_2_7_seg.v
-FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/ascii_2_7_seg.v
-!i122 52
+8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/ascii_2_7_seg.v
+FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/ascii_2_7_seg.v
+!i122 4
 L0 5 51
 R3
 R4
 r1
 !s85 0
 31
-Z14 !s108 1680057768.000000
-!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/ascii_2_7_seg.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/ascii_2_7_seg.v|
+R5
+!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/ascii_2_7_seg.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/ascii_2_7_seg.v|
 !i113 0
 R6
 R0
 vBinaryToHexadecimal
-R13
+R1
 !i10b 1
 !s100 hhHPzAFoCJeg`jQ:_E@?d2
-Ib?k^;BVfb7CaST9D30a>h0
+I:0HBRWGJ?`AOb2AHQfhG@3
 R2
 w1666641070
-8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/BinaryToHexadecimal.v
-FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/BinaryToHexadecimal.v
-!i122 48
-Z15 L0 1 17
+8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/BinaryToHexadecimal.v
+FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/BinaryToHexadecimal.v
+!i122 5
+Z9 L0 1 17
 R3
 R4
 r1
 !s85 0
 31
-R14
-!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/BinaryToHexadecimal.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/BinaryToHexadecimal.v|
+R5
+!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/BinaryToHexadecimal.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/BinaryToHexadecimal.v|
 !i113 0
 R6
 R0
 n@binary@to@hexadecimal
 vBit_Rate_Pulse
-Z16 !s110 1680057765
+Z10 !s110 1680058604
 !i10b 1
 !s100 PZiK0eQASl@_0fFJE6fJ40
-IkBiP;Qb0eC^XZX=TmHOaT2
+IZTPA50AICA@4@=<U5KUIf0
 R2
 w1678774897
-8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Bit_Rate_Pulse.v
-FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Bit_Rate_Pulse.v
-!i122 14
+8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Bit_Rate_Pulse.v
+FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Bit_Rate_Pulse.v
+!i122 6
 L0 6 30
 R3
 R4
 r1
 !s85 0
 31
-Z17 !s108 1680057765.000000
-!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Bit_Rate_Pulse.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Bit_Rate_Pulse.v|
+Z11 !s108 1680058604.000000
+!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Bit_Rate_Pulse.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Bit_Rate_Pulse.v|
 !i113 0
 R6
 R0
 n@bit_@rate_@pulse
 vBranchAddress
-R9
+R10
 !i10b 1
 !s100 <DfgPz5o3Hi=Tg1Az<RCR1
-I;_[Rm_>QS<B[AilEYC36I3
+I@QMGndP3cKT;:c_n24RhQ0
 R2
 w1677173882
-8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/BranchAddress.v
-FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/BranchAddress.v
-!i122 37
-Z18 L0 1 19
+8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/BranchAddress.v
+FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/BranchAddress.v
+!i122 7
+Z12 L0 1 19
 R3
 R4
 r1
 !s85 0
 31
 R11
-!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/BranchAddress.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/BranchAddress.v|
+!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/BranchAddress.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/BranchAddress.v|
 !i113 0
 R6
 R0
 n@branch@address
 vclk_1Hz
-R7
+R10
 !i10b 1
 !s100 R<4hgC@=mT8WGVJ@^^W623
-Ia>iBKok:G>73V8VdQ7bO@3
+IYL=ZPVzRhZNlN3=0N]EAM0
 R2
 w1678251909
-8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/clk_1Hz.v
-FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/clk_1Hz.v
-!i122 29
-Z19 L0 1 29
+8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/clk_1Hz.v
+FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/clk_1Hz.v
+!i122 8
+Z13 L0 1 29
 R3
 R4
 r1
 !s85 0
 31
-R8
-!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/clk_1Hz.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/clk_1Hz.v|
+R11
+!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/clk_1Hz.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/clk_1Hz.v|
 !i113 0
 R6
 R0
 nclk_1@hz
 vclk_9600bauds
-R16
+R10
 !i10b 1
 !s100 BchNYO=IBVezMeDUl<@cg1
-I6J9Hl1f4N:6GbCPeNAB2]1
+IknHCi2XaSe4dSdjM@RWlL2
 R2
 w1678478275
-8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/clk_9600bauds.v
-FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/clk_9600bauds.v
-!i122 24
-R19
+8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/clk_9600bauds.v
+FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/clk_9600bauds.v
+!i122 9
+R13
 R3
 R4
 r1
 !s85 0
 31
-R17
-!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/clk_9600bauds.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/clk_9600bauds.v|
+R11
+!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/clk_9600bauds.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/clk_9600bauds.v|
 !i113 0
 R6
 R0
 vcontrolUnit
-Z20 !s110 1680057764
+R10
 !i10b 1
 !s100 S@aM4D0KV__VPoEDJ0aM80
-IQ8A0?aPdjGnPHiKWTc;?S2
+I<EAS7OnBo99Do8@L@?iW[1
 R2
 w1678847484
-8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/controlUnit.v
-FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/controlUnit.v
-!i122 11
+8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/controlUnit.v
+FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/controlUnit.v
+!i122 10
 L0 1 729
 R3
 R4
 r1
 !s85 0
 31
-Z21 !s108 1680057764.000000
-!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/controlUnit.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/controlUnit.v|
+R11
+!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/controlUnit.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/controlUnit.v|
 !i113 0
 R6
 R0
 ncontrol@unit
 vCounter
-R9
+R10
 !i10b 1
 !s100 N6>kRlR`jA95N4[D:c8QW0
-IX@N?8GcY=XVW9G@Re`3k10
+I74E^bL42medmo0OKamIdR0
 R2
 w1666641870
-8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Counter.v
-FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Counter.v
-!i122 47
-R18
+8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Counter.v
+FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Counter.v
+!i122 11
+R12
 R3
 R4
 r1
 !s85 0
 31
 R11
-!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Counter.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Counter.v|
+!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Counter.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Counter.v|
 !i113 0
 R6
 R0
 n@counter
 vCounter_Param
-R16
+R10
 !i10b 1
 !s100 ;4VUcZi;d_eP>OzBaO`eH0
-Ia@kk96GGYneZTAPMG:JS23
+IAOi3E2nNV2M=3>4iabC?n1
 R2
 w1678774891
-8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Counter_Param.v
-FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Counter_Param.v
-!i122 15
+8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Counter_Param.v
+FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Counter_Param.v
+!i122 12
 L0 5 19
 R3
 R4
 r1
 !s85 0
 31
-R17
-!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Counter_Param.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Counter_Param.v|
+R11
+!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Counter_Param.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Counter_Param.v|
 !i113 0
 R6
 R0
 n@counter_@param
 vData_Memory
-R20
+R10
 !i10b 1
 !s100 4FG`FaZ?UC3`WP<aYAo]Z3
-IJW=?gX>Nbbf>YcEITX3Di3
+I>HDfAP;0Wd[o3U2j2Kfl`0
 R2
 w1680053939
-8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Data_Memory.v
-FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Data_Memory.v
-!i122 6
-Z22 L0 1 23
+8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Data_Memory.v
+FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Data_Memory.v
+!i122 13
+Z14 L0 1 23
 R3
 R4
 r1
 !s85 0
 31
-R21
-!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Data_Memory.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Data_Memory.v|
+R11
+!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Data_Memory.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Data_Memory.v|
 !i113 0
 R6
 R0
 n@data_@memory
 vDebouncer
-R16
+R10
 !i10b 1
 !s100 l>LYWMLUCFP?nYgY8Y52e0
-IDRfc^c9V6nNG5Th>B<RKI1
+I^Q_SMFdWajhYJIZanY@9S3
 R2
 w1678774880
-8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/debouncer.v
-FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/debouncer.v
-!i122 16
+8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/debouncer.v
+FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/debouncer.v
+!i122 14
 L0 4 34
 R3
 R4
 r1
 !s85 0
 31
-R17
-!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/debouncer.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/debouncer.v|
+R11
+!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/debouncer.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/debouncer.v|
 !i113 0
 R6
 R0
 n@debouncer
 vdecoder_bin_hex_7seg
-R16
+R10
 !i10b 1
 !s100 L9aUKzB^O>RP=fO;CKN^d3
-I15IJWLaUlU7I?9XneFMdb3
+ImAW_J=VMiIW94QaJQBi2V2
 R2
 w1678774876
-8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/decoder_bin_hex_7seg.v
-FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/decoder_bin_hex_7seg.v
-!i122 17
+8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/decoder_bin_hex_7seg.v
+FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/decoder_bin_hex_7seg.v
+!i122 15
 L0 6 57
 R3
 R4
 r1
 !s85 0
 31
-R17
-!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/decoder_bin_hex_7seg.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/decoder_bin_hex_7seg.v|
+R11
+!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/decoder_bin_hex_7seg.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/decoder_bin_hex_7seg.v|
 !i113 0
 R6
 R0
 vDelayer
-R16
+R10
 !i10b 1
 !s100 cfkfi=:eK?KPNc`[YROFX2
-Ii_Y<?hcZ<I?GI6SCd@8f`2
+IA[VFAj40]4oF_O>F2?][R2
 R2
 w1678774871
-8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Delayer.v
-FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Delayer.v
-!i122 18
+8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Delayer.v
+FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Delayer.v
+!i122 16
 L0 5 29
 R3
 R4
 r1
 !s85 0
 31
-R17
-!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Delayer.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Delayer.v|
+R11
+!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Delayer.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Delayer.v|
 !i113 0
 R6
 R0
 n@delayer
 vFF_D_enable
-R16
+R10
 !i10b 1
 !s100 JTo6?C0n7ON`YGzzZ7Ub52
-I80H80BH@8;mH`Q<S@7ajO0
+IPgF3J;1>QhZdaKzQ_3Jc_2
 R2
 w1678774866
-8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/FF_D_enable.v
-FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/FF_D_enable.v
-!i122 19
-Z23 L0 5 18
+8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/FF_D_enable.v
+FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/FF_D_enable.v
+!i122 17
+Z15 L0 5 18
 R3
 R4
 r1
 !s85 0
 31
-R17
-!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/FF_D_enable.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/FF_D_enable.v|
+R11
+!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/FF_D_enable.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/FF_D_enable.v|
 !i113 0
 R6
 R0
 n@f@f_@d_enable
 vFSM_Debouncer
-R16
+Z16 !s110 1680058605
 !i10b 1
 !s100 mZ6D=ZI68:8=MB?HhR8E80
-IC>kSb@X;F5EfBW0;eR=?D3
+IaCHT`]CZdX64EgkKFh46G0
 R2
 w1678774861
-8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/FSM_Debouncer.v
-FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/FSM_Debouncer.v
-!i122 20
+8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/FSM_Debouncer.v
+FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/FSM_Debouncer.v
+!i122 18
 L0 4 47
 R3
 R4
 r1
 !s85 0
 31
-R17
-!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/FSM_Debouncer.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/FSM_Debouncer.v|
+Z17 !s108 1680058605.000000
+!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/FSM_Debouncer.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/FSM_Debouncer.v|
 !i113 0
 R6
 R0
@@ -458,12 +458,12 @@ vFSM_UART_Rx
 R16
 !i10b 1
 !s100 ?QX=B6XngaBhWWCJ9iGB;2
-IP7]Jzk4SMflTeojUU01]E2
+IK;9ZlmW[WfTBW3l1Fc1Jj2
 R2
 w1678774856
-8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/FSM_UART_Rx.v
-FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/FSM_UART_Rx.v
-!i122 21
+8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/FSM_UART_Rx.v
+FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/FSM_UART_Rx.v
+!i122 19
 L0 6 124
 R3
 R4
@@ -471,45 +471,45 @@ r1
 !s85 0
 31
 R17
-!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/FSM_UART_Rx.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/FSM_UART_Rx.v|
+!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/FSM_UART_Rx.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/FSM_UART_Rx.v|
 !i113 0
 R6
 R0
 n@f@s@m_@u@a@r@t_@rx
 vFSM_UART_Tx
-R20
+R16
 !i10b 1
 !s100 YDN;7g1gO<RbU8:mVl>JZ1
-IgagzC_S1>^_oaV4FJCNZ<1
+ILN`[HK6e[=jV@8Je:XZoQ2
 R2
 w1678843312
-8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/FSM_UART_Tx.v
-FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/FSM_UART_Tx.v
-!i122 13
+8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/FSM_UART_Tx.v
+FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/FSM_UART_Tx.v
+!i122 20
 L0 1 167
 R3
 R4
 r1
 !s85 0
 31
-R21
-!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/FSM_UART_Tx.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/FSM_UART_Tx.v|
+R17
+!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/FSM_UART_Tx.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/FSM_UART_Tx.v|
 !i113 0
 R6
 R0
 n@f@s@m_@u@a@r@t_@tx
 vGPIO
-R7
+R16
 !i10b 1
 !s100 SUJTKC]KEHW2zgU?z9A^j1
-IRTaK40jDFZMf>clZ6Qj^=1
+IeS6H`043ETFBONIzi2BB02
 R2
 w1678477813
-8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/GPIO.v
-FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/GPIO.v
-!i122 25
+8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/GPIO.v
+FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/GPIO.v
+!i122 21
 L0 1 40
 R3
 R4
@@ -517,8 +517,8 @@ r1
 !s85 0
 31
 R17
-!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/GPIO.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/GPIO.v|
+!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/GPIO.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/GPIO.v|
 !i113 0
 R6
 R0
@@ -527,11 +527,11 @@ vHeard_Bit
 R16
 !i10b 1
 !s100 jA:GDITn@aE_E1zTMlXUk2
-IWEDP1ZR5:0FHiQTQe:JAP2
+I<eQ2^TZC^0D7QRX[0cOn`0
 R2
 w1678774846
-8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Heard_Bit.v
-FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Heard_Bit.v
+8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Heard_Bit.v
+FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Heard_Bit.v
 !i122 22
 L0 7 50
 R3
@@ -540,489 +540,489 @@ r1
 !s85 0
 31
 R17
-!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Heard_Bit.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Heard_Bit.v|
+!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Heard_Bit.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Heard_Bit.v|
 !i113 0
 R6
 R0
 n@heard_@bit
 vImmediateDecode
-R7
+R16
 !i10b 1
 !s100 EIgWFVU83=D1C51<WffKG0
-IWRaE>FZRG^K03lGI9ZTJb1
+I_PP?la8o[_RzPNCIhfhKA2
 R2
 w1678343483
-8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/ImmediateDecode.v
-FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/ImmediateDecode.v
-!i122 27
+8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/ImmediateDecode.v
+FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/ImmediateDecode.v
+!i122 23
 L0 1 35
 R3
 R4
 r1
 !s85 0
 31
-R8
-!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/ImmediateDecode.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/ImmediateDecode.v|
+R17
+!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/ImmediateDecode.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/ImmediateDecode.v|
 !i113 0
 R6
 R0
 n@immediate@decode
 vInstruction_Memory
-R20
+R16
 !i10b 1
 !s100 ?_IT64196b^J6B5XV1oiY2
-IB8@3i?7fcZ@aHEj_1D2>21
+Ic54E:Mkz_DL3gH[6S>a822
 R2
 w1680053948
-8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Instruction_Memory.v
-FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Instruction_Memory.v
-!i122 5
-R22
+8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Instruction_Memory.v
+FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Instruction_Memory.v
+!i122 24
+R14
 R3
 R4
 r1
 !s85 0
 31
-R5
-!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Instruction_Memory.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Instruction_Memory.v|
+R17
+!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Instruction_Memory.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Instruction_Memory.v|
 !i113 0
 R6
 R0
 n@instruction_@memory
 vInstructionData_Memory
-R7
+R16
 !i10b 1
 !s100 VTj6PHHBaTob>ao6STWUI3
-IY=ZCo9lhO`3GLgMJ_ng`I2
+IKHPKiHGA[>mCDzgOfQ>742
 R2
 w1678471816
-8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/InstructionData_Memory.v
-FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/InstructionData_Memory.v
-!i122 26
+8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/InstructionData_Memory.v
+FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/InstructionData_Memory.v
+!i122 25
 L0 3 23
 R3
 R4
 r1
 !s85 0
 31
-R8
-!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/InstructionData_Memory.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/InstructionData_Memory.v|
+R17
+!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/InstructionData_Memory.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/InstructionData_Memory.v|
 !i113 0
 R6
 R0
 n@instruction@data_@memory
 vmemoryAddress_decode
-R1
+R16
 !i10b 1
 !s100 NSYFon]E81e?QfnLgJJD`1
-If:17XRlj=jQI?KEC6f?Y>1
+I`BA;5UVHS27:Vc<dX1QK33
 R2
 w1680054098
-8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/memoryAddress_decode.v
-FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/memoryAddress_decode.v
-!i122 4
+8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/memoryAddress_decode.v
+FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/memoryAddress_decode.v
+!i122 26
 L0 1 28
 R3
 R4
 r1
 !s85 0
 31
-R5
-!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/memoryAddress_decode.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/memoryAddress_decode.v|
+R17
+!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/memoryAddress_decode.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/memoryAddress_decode.v|
 !i113 0
 R6
 R0
 nmemory@address_decode
 vMIPS
-R9
+R16
 !i10b 1
 !s100 bQB8gSUaR`ZCQ<fBaH8Cn0
-I`ZS7]AA4=S5kCN_nQ?2fT3
+INlfaD_MG1]GCjk@[X8>VW2
 R2
 w1669150226
-8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/MIPS.v
-FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/MIPS.v
-!i122 39
+8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/MIPS.v
+FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/MIPS.v
+!i122 27
 L0 1 215
 R3
 R4
 r1
 !s85 0
 31
-R11
-!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/MIPS.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/MIPS.v|
+R17
+!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/MIPS.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/MIPS.v|
 !i113 0
 R6
 R0
 n@m@i@p@s
 vMIPS_tb
-R9
+R16
 !i10b 1
 !s100 6Y_k^5<0zFabL`E_OR0971
-I>n154b8[PM4zhYA2P8[An0
+I<Hf2Y_6ESI3AfS_9ofo<41
 R2
 w1669088018
-8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/MIPS_tb.v
-FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/MIPS_tb.v
-!i122 40
-R15
+8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/MIPS_tb.v
+FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/MIPS_tb.v
+!i122 28
+R9
 R3
 R4
 r1
 !s85 0
 31
-R11
-!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/MIPS_tb.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/MIPS_tb.v|
+R17
+!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/MIPS_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/MIPS_tb.v|
 !i113 0
 R6
 R0
 n@m@i@p@s_tb
 vMux_2in_1out
-R7
+R16
 !i10b 1
 !s100 LlMNT1l3c14H9953^MQ><1
-IGYBYeNP@[Pj`lhQ=ke5GX2
+I?HP<MQ<k^oi]KKD><@;ON0
 R2
 w1677737112
-8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Mux_2in_1out.v
-FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Mux_2in_1out.v
-!i122 33
-R10
+8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Mux_2in_1out.v
+FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Mux_2in_1out.v
+!i122 29
+R7
 R3
 R4
 r1
 !s85 0
 31
-R8
-!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Mux_2in_1out.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Mux_2in_1out.v|
+R17
+!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Mux_2in_1out.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Mux_2in_1out.v|
 !i113 0
 R6
 R0
 n@mux_2in_1out
 vMux_2in_1out_TB
-R9
+Z18 !s110 1680058606
 !i10b 1
 !s100 BzPIRO2MKA]^H3>a5nRzU2
-I0<cgn9<B9CIC]kmP8LM193
+IbWhDkVSj>3GOXUzn@FE4O2
 R2
 w1669078592
-8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Mux_2in_1out_TB.v
-FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Mux_2in_1out_TB.v
-!i122 43
+8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Mux_2in_1out_TB.v
+FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Mux_2in_1out_TB.v
+!i122 30
 L0 1 34
 R3
 R4
 r1
 !s85 0
 31
-R11
-!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Mux_2in_1out_TB.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Mux_2in_1out_TB.v|
+R17
+!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Mux_2in_1out_TB.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Mux_2in_1out_TB.v|
 !i113 0
 R6
 R0
 n@mux_2in_1out_@t@b
 vMux_3in_1out
-R7
+R18
 !i10b 1
 !s100 Ya@dGETXzX?zHR0Oh0DLO2
-Ic^>PcRB_PCDHNzAgX9LcH0
+I:FDF5?Fd6k6R_e<X^NO=S2
 R2
 w1677814717
-8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Mux_3in_1out.v
-FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Mux_3in_1out.v
-!i122 30
+8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Mux_3in_1out.v
+FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Mux_3in_1out.v
+!i122 31
 L0 1 36
 R3
 R4
 r1
 !s85 0
 31
-R8
-!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Mux_3in_1out.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Mux_3in_1out.v|
+Z19 !s108 1680058606.000000
+!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Mux_3in_1out.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Mux_3in_1out.v|
 !i113 0
 R6
 R0
 n@mux_3in_1out
 vMux_4in_1out
-R7
+R18
 !i10b 1
 !s100 z9iW^hDYG?S<G8BZBEXMG2
-IJ]4_RfVA_7iA;DBRQ^AQZ0
+I<PF9@4<8XEV[<Dc5kcA6m3
 R2
 w1677737558
-8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Mux_4in_1out.v
-FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Mux_4in_1out.v
+8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Mux_4in_1out.v
+FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Mux_4in_1out.v
 !i122 32
-R10
+R7
 R3
 R4
 r1
 !s85 0
 31
-R8
-!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Mux_4in_1out.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Mux_4in_1out.v|
+R19
+!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Mux_4in_1out.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Mux_4in_1out.v|
 !i113 0
 R6
 R0
 n@mux_4in_1out
 vMux_4in_1out_TB
-R9
+R18
 !i10b 1
 !s100 bEGN[IDRT][OFMePS1QBN2
-IgAho5lV2kXiNbG5:TC@dN3
+I3FHD7D1O7c=f4njf:g:DB3
 R2
 w1669078782
-8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Mux_4in_1out_TB.v
-FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Mux_4in_1out_TB.v
-!i122 42
+8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Mux_4in_1out_TB.v
+FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Mux_4in_1out_TB.v
+!i122 33
 L0 1 38
 R3
 R4
 r1
 !s85 0
 31
-R11
-!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Mux_4in_1out_TB.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Mux_4in_1out_TB.v|
+R19
+!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Mux_4in_1out_TB.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Mux_4in_1out_TB.v|
 !i113 0
 R6
 R0
 n@mux_4in_1out_@t@b
 vMux_Tx
-R13
+R18
 !i10b 1
 !s100 NMQcZT28c=1zTQRdPHhj40
-I_RB>6J^H;5FIDYP:0LLfh1
+IZT_cYO:LcaI[R5;a=1Pz62
 R2
 w1666586821
-8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Mux_Tx.v
-FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Mux_Tx.v
-!i122 50
+8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Mux_Tx.v
+FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Mux_Tx.v
+!i122 34
 L0 1 33
 R3
 R4
 r1
 !s85 0
 31
-R14
-!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Mux_Tx.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Mux_Tx.v|
+R19
+!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Mux_Tx.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Mux_Tx.v|
 !i113 0
 R6
 R0
 n@mux_@tx
 vparity
-R13
+R18
 !i10b 1
 !s100 JK9cVSRV2cM6aN5MVIj?^1
-ION[U7lg;FzR1K6FHOBKSP3
+IH6oobA0SdFbbYDS7h=>V>0
 R2
 w1666586898
-8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/parity.v
-FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/parity.v
-!i122 49
+8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/parity.v
+FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/parity.v
+!i122 35
 L0 2 25
 R3
 R4
 r1
 !s85 0
 31
-R14
-!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/parity.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/parity.v|
+R19
+!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/parity.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/parity.v|
 !i113 0
 R6
 R0
 vPCH
-R1
+R18
 !i10b 1
 !s100 c7l_aM8DAYHKezKcZ<N8E3
-IaIzFT`85?03BZS:7l4OII2
+IV>cj_2;lSz:ohEzI29]@f0
 R2
 w1680057059
-8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/PCH.v
-FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/PCH.v
-!i122 2
+8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/PCH.v
+FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/PCH.v
+!i122 36
 L0 1 151
 R3
 R4
 r1
 !s85 0
 31
-R5
-!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/PCH.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/PCH.v|
+R19
+!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/PCH.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/PCH.v|
 !i113 0
 R6
 R0
 n@p@c@h
 vprogramCounter
-R7
+R18
 !i10b 1
 !s100 LNXUC<[>S[bD4]<GhblSj1
-IEj?13_8jj7BkmQD`W1i1Q0
+IM3C@EQ^@fWL`zknR]U8zb1
 R2
 w1677188957
-8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/programCounter.v
-FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/programCounter.v
-!i122 36
-R22
+8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/programCounter.v
+FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/programCounter.v
+!i122 37
+R14
 R3
 R4
 r1
 !s85 0
 31
-R8
-!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/programCounter.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/programCounter.v|
+R19
+!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/programCounter.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/programCounter.v|
 !i113 0
 R6
 R0
 nprogram@counter
 vprogramCounter_decode
-R7
+R18
 !i10b 1
 !s100 [o7LoB9K[Hkge5bzoU@TS1
-IeK5_WI^2>Eo5ajIh8bV`k3
+I@OOi_XKR>9:0[h3E7l>9V3
 R2
 w1677736979
-8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/programCounter_decode.v
-FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/programCounter_decode.v
-!i122 34
-R22
+8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/programCounter_decode.v
+FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/programCounter_decode.v
+!i122 38
+R14
 R3
 R4
 r1
 !s85 0
 31
-R8
-!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/programCounter_decode.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/programCounter_decode.v|
+R19
+!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/programCounter_decode.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/programCounter_decode.v|
 !i113 0
 R6
 R0
 nprogram@counter_decode
 vReg_Param
-R13
+R18
 !i10b 1
 !s100 oTE6=ci6<WUgG>@Y<O?Sc0
-IC7NL?OXlE9k]lc1`AU[FD1
+IellY;R1R>VPA;kE1]j]AL1
 R2
 w1596564780
-8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Reg_Param.v
-FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Reg_Param.v
-!i122 53
-R23
+8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Reg_Param.v
+FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Reg_Param.v
+!i122 39
+R15
 R3
 R4
 r1
 !s85 0
 31
-R14
-!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Reg_Param.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Reg_Param.v|
+R19
+!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Reg_Param.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Reg_Param.v|
 !i113 0
 R6
 R0
 n@reg_@param
 vregister
-R9
+R18
 !i10b 1
 !s100 zZ`d?<dmZb>3a28E18Ff71
-IQJ7m9K4mS98C1U>S2VPb?1
+IQ98ZC^A9B0B9R7bjjCPSi2
 R2
 w1669083431
-8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/register.v
-FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/register.v
-!i122 41
+8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/register.v
+FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/register.v
+!i122 40
 L0 1 24
 R3
 R4
 r1
 !s85 0
 31
-R11
-!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/register.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/register.v|
+R19
+!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/register.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/register.v|
 !i113 0
 R6
 R0
 vRegisterFile
-R9
+R18
 !i10b 1
 !s100 a<9N;7<`DWPmeOIbI1<023
-Ig5?KHbb<eWI@L]QlYPH[41
+IZ>zI7TZI_^GHO3R4eUZLF1
 R2
 w1669073313
-8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/RegisterFile.v
-FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/RegisterFile.v
-!i122 44
+8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/RegisterFile.v
+FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/RegisterFile.v
+!i122 41
 L0 1 26
 R3
 R4
 r1
 !s85 0
 31
-R11
-!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/RegisterFile.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/RegisterFile.v|
+R19
+!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/RegisterFile.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/RegisterFile.v|
 !i113 0
 R6
 R0
 n@register@file
 vRISC_V
-R1
+Z20 !s110 1680058607
 !i10b 1
 !s100 ZO5okC2nYocgITFaa5?PG2
-IU[jHVzGTOUj5SkSC;5OPE0
+IFIhQnNFm0?PHYYGEPLWMY0
 R2
 w1680056572
-8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/RISC_V.v
-FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/RISC_V.v
-!i122 3
+8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/RISC_V.v
+FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/RISC_V.v
+!i122 42
 L0 1 300
 R3
 R4
 r1
 !s85 0
 31
-R5
-!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/RISC_V.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/RISC_V.v|
+Z21 !s108 1680058607.000000
+!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/RISC_V.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/RISC_V.v|
 !i113 0
 R6
 R0
 n@r@i@s@c_@v
 vRISC_V_Single_Cycle
-R1
+R20
 !i10b 1
 !s100 jCJPgQjGLLbCj`XL@iANT0
-IZ3jhBT4SNnThf]_UEdI4[2
+IOnKND7Sd`63JgRQW16R641
 R2
 w1680057169
-8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/RISC_V_Single_Cycle.v
-FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/RISC_V_Single_Cycle.v
-!i122 1
+8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/RISC_V_Single_Cycle.v
+FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/RISC_V_Single_Cycle.v
+!i122 43
 L0 1 142
 R3
 R4
 r1
 !s85 0
 31
-R5
-!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/RISC_V_Single_Cycle.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/RISC_V_Single_Cycle.v|
+R21
+!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/RISC_V_Single_Cycle.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/RISC_V_Single_Cycle.v|
 !i113 0
 R6
 R0
@@ -1031,12 +1031,12 @@ vRISC_V_Single_Cycle_tb
 R20
 !i10b 1
 !s100 [MK=6[hUFddVTK<HLR^_42
-I=LfZG4Zi;KPGRPgBjWK3c0
+IOP6ok;:I?9[T5cOgWVG5L2
 R2
 w1680052444
-8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/RISC_V_Single_Cycle_tb.v
-FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/RISC_V_Single_Cycle_tb.v
-!i122 7
+8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/RISC_V_Single_Cycle_tb.v
+FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/RISC_V_Single_Cycle_tb.v
+!i122 44
 L0 1 39
 R3
 R4
@@ -1044,100 +1044,100 @@ r1
 !s85 0
 31
 R21
-!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/RISC_V_Single_Cycle_tb.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/RISC_V_Single_Cycle_tb.v|
+!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/RISC_V_Single_Cycle_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/RISC_V_Single_Cycle_tb.v|
 !i113 0
 R6
 R0
 n@r@i@s@c_@v_@single_@cycle_tb
 vRISC_V_tb
-R7
+R20
 !i10b 1
 !s100 h_j09<S9IMYg85FjeCaTg1
-IamhzZOl9[fCg:<j59:ngj1
+IU<[9a4=l35<dY6COb?^<i0
 R2
 w1677210446
-8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/RISC_V_tb.v
-FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/RISC_V_tb.v
-!i122 35
-Z24 L0 1 18
+8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/RISC_V_tb.v
+FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/RISC_V_tb.v
+!i122 45
+Z22 L0 1 18
 R3
 R4
 r1
 !s85 0
 31
-R8
-!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/RISC_V_tb.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/RISC_V_tb.v|
+R21
+!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/RISC_V_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/RISC_V_tb.v|
 !i113 0
 R6
 R0
 n@r@i@s@c_@v_tb
 vShift_Register_R_Param
-R13
+R20
 !i10b 1
 !s100 E8NlJ`@8on21B94Fo^g9K3
-IO[T`nP7m^@Vf6?TMAS[K51
+Ie7nm=:Z42lP1[1G0D8=;j2
 R2
 w1666586726
-8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Shift_Register_R_Param.v
-FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Shift_Register_R_Param.v
-!i122 51
+8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Shift_Register_R_Param.v
+FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Shift_Register_R_Param.v
+!i122 46
 L0 2 29
 R3
 R4
 r1
 !s85 0
 31
-R14
-!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Shift_Register_R_Param.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Shift_Register_R_Param.v|
+R21
+!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Shift_Register_R_Param.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Shift_Register_R_Param.v|
 !i113 0
 R6
 R0
 n@shift_@register_@r_@param
 vShift_Register_R_Param_Rx
-R16
+R20
 !i10b 1
 !s100 GAjRFTE47RdARVW9^zHNF2
-IY`BPbfFhO<:LBiR16<=gR2
+I8XI8gbl7FZTEB9JEWJ6jX0
 R2
 w1678774829
-8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Shift_Register_R_Param_Rx.v
-FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Shift_Register_R_Param_Rx.v
-!i122 23
+8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Shift_Register_R_Param_Rx.v
+FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Shift_Register_R_Param_Rx.v
+!i122 47
 L0 6 17
 R3
 R4
 r1
 !s85 0
 31
-R17
-!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Shift_Register_R_Param_Rx.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/Shift_Register_R_Param_Rx.v|
+R21
+!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Shift_Register_R_Param_Rx.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Shift_Register_R_Param_Rx.v|
 !i113 0
 R6
 R0
 n@shift_@register_@r_@param_@rx
 vsignExtend
-R7
+R20
 !i10b 1
 !s100 d9O0I`OQ;=8C@6cU[[Z0W2
-IK@gX4h6i3G:7bR?HEOn@Y0
+IK]:9h3N;IbVLNNJj6BBPz3
 R2
 w1677737591
-8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/signExtend.v
-FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/signExtend.v
-!i122 31
-R24
+8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/signExtend.v
+FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/signExtend.v
+!i122 48
+R22
 R3
 R4
 r1
 !s85 0
 31
-R8
-!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/signExtend.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/signExtend.v|
+R21
+!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/signExtend.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/signExtend.v|
 !i113 0
 R6
 R0
@@ -1146,12 +1146,12 @@ vUART_Rx
 R20
 !i10b 1
 !s100 6J>IXlDO@C=LkCfTFQVAB3
-IkNPW2dn776D8o0>326on42
+ImVVR[6CgHKFh0V9[WQ8:z2
 R2
 w1678900002
-8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/UART_Rx.v
-FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/UART_Rx.v
-!i122 8
+8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/UART_Rx.v
+FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/UART_Rx.v
+!i122 49
 L0 1 97
 R3
 R4
@@ -1159,8 +1159,8 @@ r1
 !s85 0
 31
 R21
-!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/UART_Rx.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/UART_Rx.v|
+!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/UART_Rx.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/UART_Rx.v|
 !i113 0
 R6
 R0
@@ -1169,21 +1169,21 @@ vUART_Rx_TB
 R20
 !i10b 1
 !s100 eCG7TlQoTP4;YQ4fQ>Q=k0
-IBaL2T>O_g6aAKooH0PzCe0
+Io>RO3`R<VWMI?GVG4I66V2
 R2
 w1678896433
-8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/UART_Rx_TB.v
-FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/UART_Rx_TB.v
-!i122 10
-R19
+8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/UART_Rx_TB.v
+FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/UART_Rx_TB.v
+!i122 50
+R13
 R3
 R4
 r1
 !s85 0
 31
 R21
-!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/UART_Rx_TB.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/UART_Rx_TB.v|
+!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/UART_Rx_TB.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/UART_Rx_TB.v|
 !i113 0
 R6
 R0
@@ -1192,12 +1192,12 @@ vUART_Tx
 R20
 !i10b 1
 !s100 nVhMkzJY9>mLn[l42nW3f1
-IR=CWmIK?:BHOEVK=4R8ZX3
+IAj8F[O^Tn];Kd0:k9;oog0
 R2
 w1678845462
-8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/UART_Tx.v
-FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/UART_Tx.v
-!i122 12
+8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/UART_Tx.v
+FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/UART_Tx.v
+!i122 51
 L0 1 158
 R3
 R4
@@ -1205,8 +1205,8 @@ r1
 !s85 0
 31
 R21
-!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/UART_Tx.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/UART_Tx.v|
+!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/UART_Tx.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/UART_Tx.v|
 !i113 0
 R6
 R0
@@ -1215,44 +1215,44 @@ vUART_TxRx
 R20
 !i10b 1
 !s100 NmW495lL7Kz_BLl79WPaO2
-IRWje:[62H7CKAfYRZ1YF_2
+I9k>8;8:a9[2kHcNeFQk1n3
 R2
 w1678899617
-8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/UART_TxRx.v
-FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/UART_TxRx.v
-!i122 9
-R12
+8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/UART_TxRx.v
+FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/UART_TxRx.v
+!i122 52
+R8
 R3
 R4
 r1
 !s85 0
 31
 R21
-!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/UART_TxRx.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/UART_TxRx.v|
+!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/UART_TxRx.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/UART_TxRx.v|
 !i113 0
 R6
 R0
 n@u@a@r@t_@tx@rx
 vzeroExtend
-R9
+!s110 1680058608
 !i10b 1
 !s100 G7Xg06;obDPcD;SGZgUY?3
-In>WL18c;bD_UB[mbKQ1nY1
+IJVAzg47^zT`[^MfAlW0mb0
 R2
 w1669059793
-8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/zeroExtend.v
-FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/zeroExtend.v
-!i122 45
-R24
+8A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/zeroExtend.v
+FA:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/zeroExtend.v
+!i122 53
+R22
 R3
 R4
 r1
 !s85 0
 31
-R11
-!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/zeroExtend.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle_UART/src/zeroExtend.v|
+R21
+!s107 A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/zeroExtend.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/zeroExtend.v|
 !i113 0
 R6
 R0
