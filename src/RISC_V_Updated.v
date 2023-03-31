@@ -9,8 +9,10 @@ module RISC_V_Updated #(parameter LENGTH = 32)(
 	 
 //wire [LENGTH-1:0] programCounter_Output;
 wire [LENGTH-1:0] programCounter_Output_mux;
+wire [LENGTH-1:0] programCounter_Output_mux2;
 wire [LENGTH-1:0] programCounter_Output_normal;
 wire [LENGTH-1:0] programCounter_Output_branch;
+wire [LENGTH-1:0] programCounter_Output_JALR;
 wire [LENGTH-1:0] immediate_w;
 wire [LENGTH-1:0] ALU_Out;
 wire [LENGTH-1:0] RegisterFile_RD1_w;
@@ -23,7 +25,7 @@ wire [2:0] immediateSel;
 wire PCSrc;
 wire HADDR_Sel;
 wire ALUSrcA;
-wire ALUSrcB;
+wire [1:0] ALUSrcB;
 wire [2:0] ALUOp;
 wire [2:0] ALUControl;
 wire zero;
@@ -34,13 +36,14 @@ wire Branch;
 wire MemRead;
 wire RegWrite;
 wire JalFunct;
+wire PCMUx;
 
 
 programCounter  #(.LENGTH(LENGTH)) programCounter_TOP( //PC
     .clock(clock),
     .reset(reset),
     .enable(1'b1),
-    .D(programCounter_Output_mux),
+    .D(programCounter_Output_mux2),
     .Q(programCounter_Output)
     );
 	 
@@ -62,6 +65,12 @@ Adder_param #(.LENGTH(LENGTH)) Adder_param_Branch( //Adder for branches
 	.Q(programCounter_Output_branch)
 );
 
+Adder_param #(.LENGTH(LENGTH)) Adder_param_JALR( //Adder for JALR functions
+	.A(RegisterFile_RD1_w),
+	.B(immediate_w),
+	.Q(programCounter_Output_JALR)
+);
+
 Mux_2in_1out #(.LENGTH(LENGTH)) Mux_2in_1out_1(       //Mux to ProgramCounter
     .clk(clock),
     .rst(reset),
@@ -70,6 +79,16 @@ Mux_2in_1out #(.LENGTH(LENGTH)) Mux_2in_1out_1(       //Mux to ProgramCounter
     .B(programCounter_Output_branch),
     .sel(PCSrc),
     .Q(programCounter_Output_mux)
+    );
+	 
+Mux_2in_1out #(.LENGTH(LENGTH)) Mux_2in_1out_7(       //Mux to ProgramCounter with rs1+imm adder
+    .clk(clock),
+    .rst(reset),
+    .enable(1'b1),
+    .A(programCounter_Output_mux),
+    .B(programCounter_Output_JALR),
+    .sel(PCMux),
+    .Q(programCounter_Output_mux2)
     );
 	 
 Mux_2in_1out #(.LENGTH(LENGTH)) Mux_2in_1out_2(       //Mux for HADDR
@@ -87,8 +106,8 @@ Mux_2in_1out #(.LENGTH(5)) Mux_2in_1out_5(       //Mux after data memory (final 
     .rst(reset),
     .enable(1'b1),
     .A(HRDATA_Instr[19:15]),
-    .B(HRDATA_Instr[11:7]),		//Todavia falta la ALU
-    .sel(RegDst),	//Y este selector debe venir de la control unit
+    .B(HRDATA_Instr[11:7]),
+    .sel(RegDst),
     .Q(RegisterFile_A3_w)
     );
 	 
@@ -115,12 +134,13 @@ Mux_2in_1out #(.LENGTH(LENGTH)) Mux_2in_1out_6(       //Mux after data memory (f
     .Q(RD1_PC_mux_w)
     );
 
-Mux_2in_1out #(.LENGTH(LENGTH)) Mux_2in_1out_3(       //Mux for HADDR
+Mux_4in_1out #(.LENGTH(LENGTH)) Mux_4in_1out_1(       //Mux ALU SRCB
     .clk(clock),
     .rst(reset),
     .enable(1'b1),
     .A(RegisterFile_RD2_w),
     .B(immediate_w),		//Todavia falta la ALU
+	 .C('h4),
     .sel(ALUSrcB),	//Y este selector debe venir de la control unit
     .Q(RD2_Imm_mux_w)
     );
@@ -170,7 +190,8 @@ ControlUnit_SC ControlUnit(
 	 .RegDst(RegDst),
 	 .immediateSel(immediateSel),
     .ALUOp(ALUOp),
-	 .JalFunct(JalFunct)
+	 .JalFunct(JalFunct),
+	 .PCMux(PCMux)
 );
 
 assign PCSrc = (zero & Branch) | JalFunct;

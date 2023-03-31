@@ -7,7 +7,7 @@ module ControlUnit_SC (
     output reg MemtoReg,
     output reg MemWrite,
 	 output reg ALUSrcA,
-	 output reg ALUSrcB,
+	 output reg [1:0] ALUSrcB,
     output reg RegWrite,
 	 output reg HADDR_Sel,
 	 output reg RegDst,
@@ -22,7 +22,8 @@ module ControlUnit_SC (
 //	 output reg BranchNE,
 	 output reg [2:0] immediateSel,
     output reg [2:0] ALUOp,
-	 output reg JalFunct
+	 output reg JalFunct,
+	 output reg PCMux
 );
 
 localparam B_Type = 7'b1100011;
@@ -47,13 +48,14 @@ always @*
 						MemtoReg			=	1'b0;
 						MemWrite			=	1'b0;
 						ALUSrcA			=	1'b0;
-						ALUSrcB			=	1'b0;
+						ALUSrcB			=	2'b00;
 						RegWrite			=	1'b0;
 						HADDR_Sel		=	1'b0;
 						RegDst			=	1'b0;
 						immediateSel	=	3'b000;
 						ALUOp				=	3'b000;
 						JalFunct			=	1'b0;
+						PCMux				=	1'b0;
 					end
 		else 
 		case (opCode)
@@ -64,13 +66,14 @@ always @*
 						MemtoReg			=	1'b0;
 						MemWrite			=	1'b0;
 						ALUSrcA			=	1'b1;	//Selecciona el RD1
-						ALUSrcB			=	1'b0;	//Y el RD2
+						ALUSrcB			=	2'b00;	//Y el RD2
 						RegWrite			=	1'b1;
 						HADDR_Sel		=	1'b0;
 						RegDst			=	1'b1;
 						immediateSel	=	3'b000;
 						ALUOp				=	3'b010;
 						JalFunct			=	1'b0;
+						PCMux				=	1'b0;
 					end
             I_Type:
 					begin
@@ -79,13 +82,14 @@ always @*
 						MemtoReg			=	1'b0;
 						MemWrite			=	1'b0;
 						ALUSrcA			=	1'b1;		//Seleccina el RD1
-						ALUSrcB			=	1'b1;		//Selecciona el immediate
+						ALUSrcB			=	2'b01;		//Selecciona el immediate
 						RegWrite			=	1'b1;
 						HADDR_Sel		=	1'b0;
 						RegDst			=	1'b1;
 						immediateSel	=	3'b000;	//Selecciona el de tipo I
 						ALUOp				=	3'b010;	//Que seleccione dependiendo del funct
 						JalFunct			=	1'b0;
+						PCMux				=	1'b0;
 					end
 				AUIPC:
 					begin
@@ -94,13 +98,14 @@ always @*
 						MemtoReg			=	1'b0;
 						MemWrite			=	1'b0;
 						ALUSrcA			=	1'b0;	//Selecciona el PC
-						ALUSrcB			=	1'b1;	//Selecciona el immediate
+						ALUSrcB			=	2'b01;	//Selecciona el immediate
 						RegWrite			=	1'b1;	//Para que escriba en el register file
 						HADDR_Sel		=	1'b0;
 						RegDst			=	1'b1;	//Guarda en rd
 						immediateSel	=	3'b101;	//U Type con shift
 						ALUOp				=	3'b000;	//Para que sume
 						JalFunct			=	1'b0;
+						PCMux				=	1'b0;
 					end
 				LW:
 					begin
@@ -109,13 +114,14 @@ always @*
 						MemtoReg			=	1'b1;	//Para seleccionar la salida de la memoria de datos
 						MemWrite			=	1'b0;
 						ALUSrcA			=	1'b1;	//Selecciona RD1
-						ALUSrcB			=	1'b1;	//Y el immediate
+						ALUSrcB			=	2'b01;	//Y el immediate
 						RegWrite			=	1'b1;	//Habilita la escritura en el register file
 						HADDR_Sel		=	1'b1;	//Para seleccionar la direccion de memoria y no la del PC
 						RegDst			=	1'b1;	//Lo escribe en rd
 						immediateSel	=	3'b000;	//I_Type
 						ALUOp				=	3'b000;	//Y los suma
 						JalFunct			=	1'b0;
+						PCMux				=	1'b0;
 					end
 				B_Type:
 					if(funct == BEQ)
@@ -125,13 +131,14 @@ always @*
 						MemtoReg			=	1'b0;
 						MemWrite			=	1'b0;
 						ALUSrcA			=	1'b1;	//Elige rd1 del register file
-						ALUSrcB			=	1'b0;	//Y rd2 del register file
+						ALUSrcB			=	2'b00;	//Y rd2 del register file
 						RegWrite			=	1'b0;
 						HADDR_Sel		=	1'b0;
 						RegDst			=	1'b0;
 						immediateSel	=	3'b010;	//Para B Type
 						ALUOp				=	3'b110;	//Para restar y ver si son iguales
 						JalFunct			=	1'b0;
+						PCMux				=	1'b0;
 					end
 					else
 					begin
@@ -140,13 +147,14 @@ always @*
 						MemtoReg			=	1'b0;
 						MemWrite			=	1'b0;
 						ALUSrcA			=	1'b0;
-						ALUSrcB			=	1'b0;
+						ALUSrcB			=	2'b00;
 						RegWrite			=	1'b0;
 						HADDR_Sel		=	1'b0;
 						RegDst			=	1'b0;
 						immediateSel	=	3'b000;
 						ALUOp				=	3'b000;
 						JalFunct			=	1'b0;
+						PCMux				=	1'b0;
 					end
 				JAL:
 					begin
@@ -155,13 +163,30 @@ always @*
 						MemtoReg			=	1'b0;
 						MemWrite			=	1'b0;
 						ALUSrcA			=	1'b0;	//Para el PC
-						ALUSrcB			=	1'b1;	//Para el immediate
-						RegWrite			=	1'b0;
+						ALUSrcB			=	2'b10;	//Para 4
+						RegWrite			=	1'b1;	//Para escribir en el register file
 						HADDR_Sel		=	1'b0;
-						RegDst			=	1'b0;
+						RegDst			=	1'b1;	//En rd
 						immediateSel	=	3'b100;	//Para J Type
 						ALUOp				=	3'b000;	//Para sumar
 						JalFunct			=	1'b1;		//Es funcion Jal
+						PCMux				=	1'b0;
+					end
+				JALR:
+					begin
+						Branch			=	1'b0;
+						MemRead			=	1'b0;
+						MemtoReg			=	1'b0;
+						MemWrite			=	1'b0;
+						ALUSrcA			=	1'b0;	//Para el PC
+						ALUSrcB			=	2'b10;	//Para el 4
+						RegWrite			=	1'b1;	//Para escribir en el register file
+						HADDR_Sel		=	1'b0;
+						RegDst			=	1'b1;	//En rd
+						immediateSel	=	3'b000;	//Para I Type
+						ALUOp				=	3'b000;	//Para sumar
+						JalFunct			=	1'b0;
+						PCMux				=	1'b1;		//Para que el PC sea RS1 + IMM
 					end
 				default:
 					begin
@@ -170,13 +195,14 @@ always @*
 						MemtoReg			=	1'b0;
 						MemWrite			=	1'b0;
 						ALUSrcA			=	1'b0;
-						ALUSrcB			=	1'b0;
+						ALUSrcB			=	2'b00;
 						RegWrite			=	1'b0;
 						HADDR_Sel		=	1'b0;
 						RegDst			=	1'b0;
 						immediateSel	=	3'b000;
 						ALUOp				=	3'b000;
 						JalFunct			=	1'b0;
+						PCMux				=	1'b0;
 					end
 	endcase	 
 	end
