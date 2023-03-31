@@ -2286,3 +2286,439 @@ run
 run
 run
 run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.RISC_V_Single_Cycle_tb(fast)
+# Loading work.RISC_V_Single_Cycle(fast)
+# Loading work.RISC_V_Updated(fast)
+# Loading work.programCounter(fast)
+# Loading work.ImmediateDecode(fast)
+# Loading work.Adder_param(fast)
+# Loading work.Mux_2in_1out(fast)
+# Loading work.Mux_2in_1out(fast__1)
+# Loading work.RegisterFile(fast)
+# Loading work.Mux_4in_1out(fast)
+# Loading work.ALU_Control(fast)
+# Loading work.ALU(fast)
+# Loading work.ControlUnit_SC(fast)
+# Loading work.PCH(fast)
+# Loading work.Address_decode(fast)
+# Loading work.Instruction_Memory(fast)
+# Loading work.Data_Memory(fast)
+# Loading work.GPIO(fast)
+# Loading work.UART_TxRx(fast)
+# Loading work.UART_Rx(fast)
+# Loading work.register(fast)
+# Loading work.Shift_Register_R_Param_Rx(fast)
+# Loading work.Reg_Param(fast)
+# Loading work.FF_D_enable(fast)
+# Loading work.Bit_Rate_Pulse(fast)
+# Loading work.FSM_UART_Rx(fast)
+# Loading work.Counter_Param(fast)
+# Loading work.Heard_Bit(fast)
+# Loading work.ascii_2_7_seg(fast)
+# Loading work.decoder_bin_hex_7seg(fast)
+# Loading work.UART_Tx(fast)
+# Loading work.register(fast__1)
+# Loading work.Shift_Register_R_Param(fast)
+# Loading work.parity(fast)
+# Loading work.Counter_Param(fast__1)
+# Loading work.Mux_Tx(fast)
+# Loading work.FSM_UART_Tx(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (32) for port 'addr'. The port definition is at: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Instruction_Memory.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /RISC_V_Single_Cycle_tb/UUT/Instruction_Memory_TOP File: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/RISC_V_Single_Cycle.v Line: 115
+# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (32) for port 'addr'. The port definition is at: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Data_Memory.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /RISC_V_Single_Cycle_tb/UUT/Data_Memory_TOP File: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/RISC_V_Single_Cycle.v Line: 123
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (8) for port 'Rx_SR'. The port definition is at: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/UART_TxRx.v(6).
+#    Time: 0 ns  Iteration: 0  Instance: /RISC_V_Single_Cycle_tb/UUT/UART_TOP File: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/RISC_V_Single_Cycle.v Line: 143
+# Compile of RISC_V_Single_Cycle_tb.v was successful.
+run
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 65 of file "Instruction_set.txt". (Current address [64], address range [0:63])    : A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Instruction_Memory.v(12)
+#    Time: 0 ns  Iteration: 0  Instance: /RISC_V_Single_Cycle_tb/UUT/Instruction_Memory_TOP
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/RISC_V_Single_Cycle_tb.v(8): (vopt-2685) [TFMPC] - Too few port connections for 'UUT'.  Expected 12, found 6.
+# ** Warning: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/RISC_V_Single_Cycle_tb.v(8): (vopt-2718) [TFMPC] - Missing connection for port 'HEX3'.
+# ** Warning: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/RISC_V_Single_Cycle_tb.v(8): (vopt-2718) [TFMPC] - Missing connection for port 'HEX2'.
+# ** Warning: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/RISC_V_Single_Cycle_tb.v(8): (vopt-2718) [TFMPC] - Missing connection for port 'HEX0'.
+# ** Warning: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/RISC_V_Single_Cycle_tb.v(8): (vopt-2718) [TFMPC] - Missing connection for port 'heard_bit_out'.
+# ** Warning: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/RISC_V_Single_Cycle_tb.v(8): (vopt-2718) [TFMPC] - Missing connection for port 'parity'.
+# ** Warning: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/RISC_V_Single_Cycle_tb.v(8): (vopt-2718) [TFMPC] - Missing connection for port 'clk_out'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=7.
+# Loading work.RISC_V_Single_Cycle_tb(fast)
+# Loading work.RISC_V_Single_Cycle(fast)
+# Loading work.RISC_V_Updated(fast)
+# Loading work.programCounter(fast)
+# Loading work.ImmediateDecode(fast)
+# Loading work.Adder_param(fast)
+# Loading work.Mux_2in_1out(fast)
+# Loading work.Mux_2in_1out(fast__1)
+# Loading work.RegisterFile(fast)
+# Loading work.Mux_4in_1out(fast)
+# Loading work.ALU_Control(fast)
+# Loading work.ALU(fast)
+# Loading work.ControlUnit_SC(fast)
+# Loading work.PCH(fast)
+# Loading work.Address_decode(fast)
+# Loading work.Instruction_Memory(fast)
+# Loading work.Data_Memory(fast)
+# Loading work.GPIO(fast)
+# Loading work.UART_TxRx(fast)
+# Loading work.UART_Rx(fast)
+# Loading work.register(fast)
+# Loading work.Shift_Register_R_Param_Rx(fast)
+# Loading work.Reg_Param(fast)
+# Loading work.FF_D_enable(fast)
+# Loading work.Bit_Rate_Pulse(fast)
+# Loading work.FSM_UART_Rx(fast)
+# Loading work.Counter_Param(fast)
+# Loading work.Heard_Bit(fast)
+# Loading work.ascii_2_7_seg(fast)
+# Loading work.decoder_bin_hex_7seg(fast)
+# Loading work.UART_Tx(fast)
+# Loading work.register(fast__1)
+# Loading work.Shift_Register_R_Param(fast)
+# Loading work.parity(fast)
+# Loading work.Counter_Param(fast__1)
+# Loading work.Mux_Tx(fast)
+# Loading work.FSM_UART_Tx(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (32) for port 'addr'. The port definition is at: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Instruction_Memory.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /RISC_V_Single_Cycle_tb/UUT/Instruction_Memory_TOP File: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/RISC_V_Single_Cycle.v Line: 115
+# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (32) for port 'addr'. The port definition is at: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Data_Memory.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /RISC_V_Single_Cycle_tb/UUT/Data_Memory_TOP File: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/RISC_V_Single_Cycle.v Line: 123
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (8) for port 'Rx_SR'. The port definition is at: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/UART_TxRx.v(6).
+#    Time: 0 ns  Iteration: 0  Instance: /RISC_V_Single_Cycle_tb/UUT/UART_TOP File: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/RISC_V_Single_Cycle.v Line: 143
+run
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 65 of file "Instruction_set.txt". (Current address [64], address range [0:63])    : A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Instruction_Memory.v(12)
+#    Time: 0 ns  Iteration: 0  Instance: /RISC_V_Single_Cycle_tb/UUT/Instruction_Memory_TOP
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/RISC_V_Single_Cycle_tb/reset 1'h1 0
+force -freeze sim:/RISC_V_Single_Cycle_tb/reset 1'h1 0
+run
+force -freeze sim:/RISC_V_Single_Cycle_tb/reset 1'h0 0
+run
+run
+run
+# Compile of RegisterFile.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.RISC_V_Single_Cycle_tb(fast)
+# Loading work.RISC_V_Single_Cycle(fast)
+# Loading work.RISC_V_Updated(fast)
+# Loading work.programCounter(fast)
+# Loading work.ImmediateDecode(fast)
+# Loading work.Adder_param(fast)
+# Loading work.Mux_2in_1out(fast)
+# Loading work.Mux_2in_1out(fast__1)
+# Loading work.RegisterFile(fast)
+# Loading work.Mux_4in_1out(fast)
+# Loading work.ALU_Control(fast)
+# Loading work.ALU(fast)
+# Loading work.ControlUnit_SC(fast)
+# Loading work.PCH(fast)
+# Loading work.Address_decode(fast)
+# Loading work.Instruction_Memory(fast)
+# Loading work.Data_Memory(fast)
+# Loading work.GPIO(fast)
+# Loading work.UART_TxRx(fast)
+# Loading work.UART_Rx(fast)
+# Loading work.register(fast)
+# Loading work.Shift_Register_R_Param_Rx(fast)
+# Loading work.Reg_Param(fast)
+# Loading work.FF_D_enable(fast)
+# Loading work.Bit_Rate_Pulse(fast)
+# Loading work.FSM_UART_Rx(fast)
+# Loading work.Counter_Param(fast)
+# Loading work.Heard_Bit(fast)
+# Loading work.ascii_2_7_seg(fast)
+# Loading work.decoder_bin_hex_7seg(fast)
+# Loading work.UART_Tx(fast)
+# Loading work.register(fast__1)
+# Loading work.Shift_Register_R_Param(fast)
+# Loading work.parity(fast)
+# Loading work.Counter_Param(fast__1)
+# Loading work.Mux_Tx(fast)
+# Loading work.FSM_UART_Tx(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (32) for port 'addr'. The port definition is at: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Instruction_Memory.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /RISC_V_Single_Cycle_tb/UUT/Instruction_Memory_TOP File: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/RISC_V_Single_Cycle.v Line: 115
+# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (32) for port 'addr'. The port definition is at: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Data_Memory.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /RISC_V_Single_Cycle_tb/UUT/Data_Memory_TOP File: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/RISC_V_Single_Cycle.v Line: 123
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (8) for port 'Rx_SR'. The port definition is at: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/UART_TxRx.v(6).
+#    Time: 0 ns  Iteration: 0  Instance: /RISC_V_Single_Cycle_tb/UUT/UART_TOP File: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/RISC_V_Single_Cycle.v Line: 143
+run
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 65 of file "Instruction_set.txt". (Current address [64], address range [0:63])    : A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Instruction_Memory.v(12)
+#    Time: 0 ns  Iteration: 0  Instance: /RISC_V_Single_Cycle_tb/UUT/Instruction_Memory_TOP
+force -freeze sim:/RISC_V_Single_Cycle_tb/reset 1'h1 0
+force -freeze sim:/RISC_V_Single_Cycle_tb/reset 1'h0 0
+run
+# Causality operation skipped due to absence of debug database file
+add wave -position insertpoint  \
+sim:/RISC_V_Single_Cycle_tb/UUT/Data_Memory_TOP/ram
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.RISC_V_Single_Cycle_tb(fast)
+# Loading work.RISC_V_Single_Cycle(fast)
+# Loading work.RISC_V_Updated(fast)
+# Loading work.programCounter(fast)
+# Loading work.ImmediateDecode(fast)
+# Loading work.Adder_param(fast)
+# Loading work.Mux_2in_1out(fast)
+# Loading work.Mux_2in_1out(fast__1)
+# Loading work.RegisterFile(fast)
+# Loading work.Mux_4in_1out(fast)
+# Loading work.ALU_Control(fast)
+# Loading work.ALU(fast)
+# Loading work.ControlUnit_SC(fast)
+# Loading work.PCH(fast)
+# Loading work.Address_decode(fast)
+# Loading work.Instruction_Memory(fast)
+# Loading work.Data_Memory(fast)
+# Loading work.GPIO(fast)
+# Loading work.UART_TxRx(fast)
+# Loading work.UART_Rx(fast)
+# Loading work.register(fast)
+# Loading work.Shift_Register_R_Param_Rx(fast)
+# Loading work.Reg_Param(fast)
+# Loading work.FF_D_enable(fast)
+# Loading work.Bit_Rate_Pulse(fast)
+# Loading work.FSM_UART_Rx(fast)
+# Loading work.Counter_Param(fast)
+# Loading work.Heard_Bit(fast)
+# Loading work.ascii_2_7_seg(fast)
+# Loading work.decoder_bin_hex_7seg(fast)
+# Loading work.UART_Tx(fast)
+# Loading work.register(fast__1)
+# Loading work.Shift_Register_R_Param(fast)
+# Loading work.parity(fast)
+# Loading work.Counter_Param(fast__1)
+# Loading work.Mux_Tx(fast)
+# Loading work.FSM_UART_Tx(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (32) for port 'addr'. The port definition is at: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Instruction_Memory.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /RISC_V_Single_Cycle_tb/UUT/Instruction_Memory_TOP File: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/RISC_V_Single_Cycle.v Line: 115
+# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (32) for port 'addr'. The port definition is at: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Data_Memory.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /RISC_V_Single_Cycle_tb/UUT/Data_Memory_TOP File: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/RISC_V_Single_Cycle.v Line: 123
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (8) for port 'Rx_SR'. The port definition is at: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/UART_TxRx.v(6).
+#    Time: 0 ns  Iteration: 0  Instance: /RISC_V_Single_Cycle_tb/UUT/UART_TOP File: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/RISC_V_Single_Cycle.v Line: 143
+run
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 65 of file "Instruction_set.txt". (Current address [64], address range [0:63])    : A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Instruction_Memory.v(12)
+#    Time: 0 ns  Iteration: 0  Instance: /RISC_V_Single_Cycle_tb/UUT/Instruction_Memory_TOP
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.RISC_V_Single_Cycle_tb(fast)
+# Loading work.RISC_V_Single_Cycle(fast)
+# Loading work.RISC_V_Updated(fast)
+# Loading work.programCounter(fast)
+# Loading work.ImmediateDecode(fast)
+# Loading work.Adder_param(fast)
+# Loading work.Mux_2in_1out(fast)
+# Loading work.Mux_2in_1out(fast__1)
+# Loading work.RegisterFile(fast)
+# Loading work.Mux_4in_1out(fast)
+# Loading work.ALU_Control(fast)
+# Loading work.ALU(fast)
+# Loading work.ControlUnit_SC(fast)
+# Loading work.PCH(fast)
+# Loading work.Address_decode(fast)
+# Loading work.Instruction_Memory(fast)
+# Loading work.Data_Memory(fast)
+# Loading work.GPIO(fast)
+# Loading work.UART_TxRx(fast)
+# Loading work.UART_Rx(fast)
+# Loading work.register(fast)
+# Loading work.Shift_Register_R_Param_Rx(fast)
+# Loading work.Reg_Param(fast)
+# Loading work.FF_D_enable(fast)
+# Loading work.Bit_Rate_Pulse(fast)
+# Loading work.FSM_UART_Rx(fast)
+# Loading work.Counter_Param(fast)
+# Loading work.Heard_Bit(fast)
+# Loading work.ascii_2_7_seg(fast)
+# Loading work.decoder_bin_hex_7seg(fast)
+# Loading work.UART_Tx(fast)
+# Loading work.register(fast__1)
+# Loading work.Shift_Register_R_Param(fast)
+# Loading work.parity(fast)
+# Loading work.Counter_Param(fast__1)
+# Loading work.Mux_Tx(fast)
+# Loading work.FSM_UART_Tx(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (32) for port 'addr'. The port definition is at: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Instruction_Memory.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /RISC_V_Single_Cycle_tb/UUT/Instruction_Memory_TOP File: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/RISC_V_Single_Cycle.v Line: 115
+# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (32) for port 'addr'. The port definition is at: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Data_Memory.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /RISC_V_Single_Cycle_tb/UUT/Data_Memory_TOP File: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/RISC_V_Single_Cycle.v Line: 123
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (8) for port 'Rx_SR'. The port definition is at: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/UART_TxRx.v(6).
+#    Time: 0 ns  Iteration: 0  Instance: /RISC_V_Single_Cycle_tb/UUT/UART_TOP File: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/RISC_V_Single_Cycle.v Line: 143
+run
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 65 of file "Instruction_set.txt". (Current address [64], address range [0:63])    : A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Instruction_Memory.v(12)
+#    Time: 0 ns  Iteration: 0  Instance: /RISC_V_Single_Cycle_tb/UUT/Instruction_Memory_TOP
+run
+run
+run
+force -freeze sim:/RISC_V_Single_Cycle_tb/reset 1'h1 0
+force -freeze sim:/RISC_V_Single_Cycle_tb/reset 1'h0 0
+# Compile of UART_TxRx.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.RISC_V_Single_Cycle_tb(fast)
+# Loading work.RISC_V_Single_Cycle(fast)
+# Loading work.RISC_V_Updated(fast)
+# Loading work.programCounter(fast)
+# Loading work.ImmediateDecode(fast)
+# Loading work.Adder_param(fast)
+# Loading work.Mux_2in_1out(fast)
+# Loading work.Mux_2in_1out(fast__1)
+# Loading work.RegisterFile(fast)
+# Loading work.Mux_4in_1out(fast)
+# Loading work.ALU_Control(fast)
+# Loading work.ALU(fast)
+# Loading work.ControlUnit_SC(fast)
+# Loading work.PCH(fast)
+# Loading work.Address_decode(fast)
+# Loading work.Instruction_Memory(fast)
+# Loading work.Data_Memory(fast)
+# Loading work.GPIO(fast)
+# Loading work.UART_TxRx(fast)
+# Loading work.UART_Rx(fast)
+# Loading work.register(fast)
+# Loading work.Shift_Register_R_Param_Rx(fast)
+# Loading work.Reg_Param(fast)
+# Loading work.FF_D_enable(fast)
+# Loading work.Bit_Rate_Pulse(fast)
+# Loading work.FSM_UART_Rx(fast)
+# Loading work.Counter_Param(fast)
+# Loading work.Heard_Bit(fast)
+# Loading work.ascii_2_7_seg(fast)
+# Loading work.decoder_bin_hex_7seg(fast)
+# Loading work.UART_Tx(fast)
+# Loading work.register(fast__1)
+# Loading work.Shift_Register_R_Param(fast)
+# Loading work.parity(fast)
+# Loading work.Counter_Param(fast__1)
+# Loading work.Mux_Tx(fast)
+# Loading work.FSM_UART_Tx(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (32) for port 'addr'. The port definition is at: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Instruction_Memory.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /RISC_V_Single_Cycle_tb/UUT/Instruction_Memory_TOP File: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/RISC_V_Single_Cycle.v Line: 115
+# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (32) for port 'addr'. The port definition is at: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Data_Memory.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /RISC_V_Single_Cycle_tb/UUT/Data_Memory_TOP File: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/RISC_V_Single_Cycle.v Line: 123
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (8) for port 'Rx_SR'. The port definition is at: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/UART_TxRx.v(6).
+#    Time: 0 ns  Iteration: 0  Instance: /RISC_V_Single_Cycle_tb/UUT/UART_TOP File: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/RISC_V_Single_Cycle.v Line: 143
+run
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 65 of file "Instruction_set.txt". (Current address [64], address range [0:63])    : A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Instruction_Memory.v(12)
+#    Time: 0 ns  Iteration: 0  Instance: /RISC_V_Single_Cycle_tb/UUT/Instruction_Memory_TOP
+force -freeze sim:/RISC_V_Single_Cycle_tb/reset 1'h1 0
+force -freeze sim:/RISC_V_Single_Cycle_tb/reset 1'h0 0
+# Break key hit
+# Simulation stop requested.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.RISC_V_Single_Cycle_tb(fast)
+# Loading work.RISC_V_Single_Cycle(fast)
+# Loading work.RISC_V_Updated(fast)
+# Loading work.programCounter(fast)
+# Loading work.ImmediateDecode(fast)
+# Loading work.Adder_param(fast)
+# Loading work.Mux_2in_1out(fast)
+# Loading work.Mux_2in_1out(fast__1)
+# Loading work.RegisterFile(fast)
+# Loading work.Mux_4in_1out(fast)
+# Loading work.ALU_Control(fast)
+# Loading work.ALU(fast)
+# Loading work.ControlUnit_SC(fast)
+# Loading work.PCH(fast)
+# Loading work.Address_decode(fast)
+# Loading work.Instruction_Memory(fast)
+# Loading work.Data_Memory(fast)
+# Loading work.GPIO(fast)
+# Loading work.UART_TxRx(fast)
+# Loading work.UART_Rx(fast)
+# Loading work.register(fast)
+# Loading work.Shift_Register_R_Param_Rx(fast)
+# Loading work.Reg_Param(fast)
+# Loading work.FF_D_enable(fast)
+# Loading work.Bit_Rate_Pulse(fast)
+# Loading work.FSM_UART_Rx(fast)
+# Loading work.Counter_Param(fast)
+# Loading work.Heard_Bit(fast)
+# Loading work.ascii_2_7_seg(fast)
+# Loading work.decoder_bin_hex_7seg(fast)
+# Loading work.UART_Tx(fast)
+# Loading work.register(fast__1)
+# Loading work.Shift_Register_R_Param(fast)
+# Loading work.parity(fast)
+# Loading work.Counter_Param(fast__1)
+# Loading work.Mux_Tx(fast)
+# Loading work.FSM_UART_Tx(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (32) for port 'addr'. The port definition is at: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Instruction_Memory.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /RISC_V_Single_Cycle_tb/UUT/Instruction_Memory_TOP File: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/RISC_V_Single_Cycle.v Line: 115
+# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (32) for port 'addr'. The port definition is at: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Data_Memory.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /RISC_V_Single_Cycle_tb/UUT/Data_Memory_TOP File: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/RISC_V_Single_Cycle.v Line: 123
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (8) for port 'Rx_SR'. The port definition is at: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/UART_TxRx.v(6).
+#    Time: 0 ns  Iteration: 0  Instance: /RISC_V_Single_Cycle_tb/UUT/UART_TOP File: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/RISC_V_Single_Cycle.v Line: 143
+run
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 65 of file "Instruction_set.txt". (Current address [64], address range [0:63])    : A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Instruction_Memory.v(12)
+#    Time: 0 ns  Iteration: 0  Instance: /RISC_V_Single_Cycle_tb/UUT/Instruction_Memory_TOP
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.RISC_V_Single_Cycle_tb(fast)
+# Loading work.RISC_V_Single_Cycle(fast)
+# Loading work.RISC_V_Updated(fast)
+# Loading work.programCounter(fast)
+# Loading work.ImmediateDecode(fast)
+# Loading work.Adder_param(fast)
+# Loading work.Mux_2in_1out(fast)
+# Loading work.Mux_2in_1out(fast__1)
+# Loading work.RegisterFile(fast)
+# Loading work.Mux_4in_1out(fast)
+# Loading work.ALU_Control(fast)
+# Loading work.ALU(fast)
+# Loading work.ControlUnit_SC(fast)
+# Loading work.PCH(fast)
+# Loading work.Address_decode(fast)
+# Loading work.Instruction_Memory(fast)
+# Loading work.Data_Memory(fast)
+# Loading work.GPIO(fast)
+# Loading work.UART_TxRx(fast)
+# Loading work.UART_Rx(fast)
+# Loading work.register(fast)
+# Loading work.Shift_Register_R_Param_Rx(fast)
+# Loading work.Reg_Param(fast)
+# Loading work.FF_D_enable(fast)
+# Loading work.Bit_Rate_Pulse(fast)
+# Loading work.FSM_UART_Rx(fast)
+# Loading work.Counter_Param(fast)
+# Loading work.Heard_Bit(fast)
+# Loading work.ascii_2_7_seg(fast)
+# Loading work.decoder_bin_hex_7seg(fast)
+# Loading work.UART_Tx(fast)
+# Loading work.register(fast__1)
+# Loading work.Shift_Register_R_Param(fast)
+# Loading work.parity(fast)
+# Loading work.Counter_Param(fast__1)
+# Loading work.Mux_Tx(fast)
+# Loading work.FSM_UART_Tx(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (32) for port 'addr'. The port definition is at: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Instruction_Memory.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /RISC_V_Single_Cycle_tb/UUT/Instruction_Memory_TOP File: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/RISC_V_Single_Cycle.v Line: 115
+# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (32) for port 'addr'. The port definition is at: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Data_Memory.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /RISC_V_Single_Cycle_tb/UUT/Data_Memory_TOP File: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/RISC_V_Single_Cycle.v Line: 123
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (8) for port 'Rx_SR'. The port definition is at: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/UART_TxRx.v(6).
+#    Time: 0 ns  Iteration: 0  Instance: /RISC_V_Single_Cycle_tb/UUT/UART_TOP File: A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/RISC_V_Single_Cycle.v Line: 143
+run
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 65 of file "Instruction_set.txt". (Current address [64], address range [0:63])    : A:/ITESO/Segundo_semestre/Micro_projects/RISC_V_Single_Cycle/src/Instruction_Memory.v(12)
+#    Time: 0 ns  Iteration: 0  Instance: /RISC_V_Single_Cycle_tb/UUT/Instruction_Memory_TOP
+force -freeze sim:/RISC_V_Single_Cycle_tb/reset 1'h1 0
+force -freeze sim:/RISC_V_Single_Cycle_tb/reset 1'h0 0
+run

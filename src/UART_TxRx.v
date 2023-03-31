@@ -34,7 +34,7 @@ UART_Rx UART_Rx_TOP(
 UART_Tx UART_Tx_TOP(
 	.clk(clock),
 	.enable(sendTx),
-	.rst(reset),
+	.rst(1),
 	.sw00(sw00),
 	.sw01(sw01),
 	.sw02(sw02),

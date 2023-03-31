@@ -23,6 +23,7 @@ initial
 		#104200 rx = 1'b0;
 		#104200 rx = 1'b0;
 		#104200 rx = 1'b0;
+		#104200 rx = 1'b1;
 	end
 	
 always

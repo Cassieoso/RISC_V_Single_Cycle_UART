@@ -16,6 +16,9 @@ module RegisterFile #(parameter DATA_WIDTH=32, parameter ADDR_WIDTH=5)(
 
 always @ (posedge clk)
   begin
+	 if(reset)
+		$readmemh("Data.txt", ram);
+	 else
     if (WE3) 
         ram[A3] <= WD3;
   end
