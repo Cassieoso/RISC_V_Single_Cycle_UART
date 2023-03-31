@@ -188,6 +188,22 @@ always @*
 						JalFunct			=	1'b0;
 						PCMux				=	1'b1;		//Para que el PC sea RS1 + IMM
 					end
+				S_Type:
+					begin
+						Branch			=	1'b0;
+						MemRead			=	1'b0;
+						MemtoReg			=	1'b0;
+						MemWrite			=	1'b1;	//Para que pueda escribir en memoria
+						ALUSrcA			=	1'b1;	//Para rd1
+						ALUSrcB			=	2'b01;	//Para el immediate
+						RegWrite			=	1'b0;
+						HADDR_Sel		=	1'b1;	//Va a referise a la memoria de datos
+						RegDst			=	1'b0;
+						immediateSel	=	3'b001;	//Para STYPE
+						ALUOp				=	3'b000;	//Para sumar
+						JalFunct			=	1'b0;
+						PCMux				=	1'b0;
+					end
 				default:
 					begin
 						Branch			=	1'b0;
