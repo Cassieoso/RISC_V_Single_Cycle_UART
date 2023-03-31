@@ -2,7 +2,8 @@ module ControlUnit_SC (
     input clk, rst,
     input [6:0] opCode,
 	 input [2:0] funct,
-	 output reg Branch,
+	 output reg BranchEQ,
+	 output reg BranchNE,
 	 output reg MemRead,
     output reg MemtoReg,
     output reg MemWrite,
@@ -43,7 +44,8 @@ always @*
 	begin
 		if (rst) 
 					begin
-						Branch			=	1'b0;
+						BranchEQ			=	1'b0;
+						BranchNE			=	1'b0;
 						MemRead			=	1'b0;
 						MemtoReg			=	1'b0;
 						MemWrite			=	1'b0;
@@ -61,7 +63,8 @@ always @*
 		case (opCode)
             R_Type:
 					begin
-						Branch			=	1'b0;
+						BranchEQ			=	1'b0;
+						BranchNE			=	1'b0;
 						MemRead			=	1'b0; //No esta conectado a nada
 						MemtoReg			=	1'b0;
 						MemWrite			=	1'b0;
@@ -77,7 +80,8 @@ always @*
 					end
             I_Type:
 					begin
-						Branch			=	1'b0;
+						BranchEQ			=	1'b0;
+						BranchNE			=	1'b0;
 						MemRead			=	1'b0; //No esta conectado a nada
 						MemtoReg			=	1'b0;
 						MemWrite			=	1'b0;
@@ -93,7 +97,8 @@ always @*
 					end
 				AUIPC:
 					begin
-						Branch			=	1'b0;
+						BranchEQ			=	1'b0;
+						BranchNE			=	1'b0;
 						MemRead			=	1'b0;	//No esta conectado a nada
 						MemtoReg			=	1'b0;
 						MemWrite			=	1'b0;
@@ -109,7 +114,8 @@ always @*
 					end
 				LW:
 					begin
-						Branch			=	1'b0;
+						BranchEQ			=	1'b0;
+						BranchNE			=	1'b0;
 						MemRead			=	1'b0;
 						MemtoReg			=	1'b1;	//Para seleccionar la salida de la memoria de datos
 						MemWrite			=	1'b0;
@@ -126,7 +132,8 @@ always @*
 				B_Type:
 					if(funct == BEQ)
 					begin
-						Branch			=	1'b1;	//Si es un branch
+						BranchEQ			=	1'b1;	//Si es un branch on equal
+						BranchNE			=	1'b0;
 						MemRead			=	1'b0;
 						MemtoReg			=	1'b0;
 						MemWrite			=	1'b0;
@@ -136,13 +143,31 @@ always @*
 						HADDR_Sel		=	1'b0;
 						RegDst			=	1'b0;
 						immediateSel	=	3'b010;	//Para B Type
-						ALUOp				=	3'b110;	//Para restar y ver si son iguales
+						ALUOp				=	3'b001;	//Para restar y ver si son iguales
+						JalFunct			=	1'b0;
+						PCMux				=	1'b0;
+					end
+					else if(funct == BNE)
+					begin
+						BranchEQ			=	1'b0;
+						BranchNE			=	1'b1;	//Es un branch not equal
+						MemRead			=	1'b0;
+						MemtoReg			=	1'b0;
+						MemWrite			=	1'b0;
+						ALUSrcA			=	1'b1;	//Elige rd1 del register file
+						ALUSrcB			=	2'b00;	//Y rd2 del register file
+						RegWrite			=	1'b0;
+						HADDR_Sel		=	1'b0;
+						RegDst			=	1'b0;
+						immediateSel	=	3'b010;	//Para B type
+						ALUOp				=	3'b001;	//Para restar y ver si son iguales
 						JalFunct			=	1'b0;
 						PCMux				=	1'b0;
 					end
 					else
 					begin
-						Branch			=	1'b0;
+						BranchEQ			=	1'b0;
+						BranchNE			=	1'b0;
 						MemRead			=	1'b0;
 						MemtoReg			=	1'b0;
 						MemWrite			=	1'b0;
@@ -158,7 +183,8 @@ always @*
 					end
 				JAL:
 					begin
-						Branch			=	1'b0;
+						BranchEQ			=	1'b0;
+						BranchNE			=	1'b0;
 						MemRead			=	1'b0;
 						MemtoReg			=	1'b0;
 						MemWrite			=	1'b0;
@@ -174,7 +200,8 @@ always @*
 					end
 				JALR:
 					begin
-						Branch			=	1'b0;
+						BranchEQ			=	1'b0;
+						BranchNE			=	1'b0;
 						MemRead			=	1'b0;
 						MemtoReg			=	1'b0;
 						MemWrite			=	1'b0;
@@ -190,7 +217,8 @@ always @*
 					end
 				S_Type:
 					begin
-						Branch			=	1'b0;
+						BranchEQ			=	1'b0;
+						BranchNE			=	1'b0;
 						MemRead			=	1'b0;
 						MemtoReg			=	1'b0;
 						MemWrite			=	1'b1;	//Para que pueda escribir en memoria
@@ -206,7 +234,8 @@ always @*
 					end
 				default:
 					begin
-						Branch			=	1'b0;
+						BranchEQ			=	1'b0;
+						BranchNE			=	1'b0;
 						MemRead			=	1'b0;
 						MemtoReg			=	1'b0;
 						MemWrite			=	1'b0;

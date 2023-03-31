@@ -32,7 +32,8 @@ wire zero;
 wire MemtoReg;
 wire RegDst;
 wire [4:0] RegisterFile_A3_w;
-wire Branch;
+wire BranchEQ;
+wire BranchNE;
 wire MemRead;
 wire RegWrite;
 wire JalFunct;
@@ -149,7 +150,7 @@ ALU_Control ALU_Control_TOP(
 	.rst(reset),
 	.ALUOp(ALUOp),		//Debe venir de la control unit
 	.funct(HRDATA_Instr[14:12]),
-	.funct7(HRDATA_Instr[14:12]),
+	.funct7(HRDATA_Instr[31:25]),
 	.opCode(HRDATA_Instr[6:0]),
 	.ALUControl(ALUControl)
     );
@@ -179,7 +180,8 @@ ControlUnit_SC ControlUnit(
 	 .rst(reset),
     .opCode(HRDATA_Instr[6:0]),
 	 .funct(HRDATA_Instr[14:12]),
-	 .Branch(Branch),
+	 .BranchEQ(BranchEQ),
+	 .BranchNE(BranchNE),
 	 .MemRead(MemRead),
     .MemtoReg(MemtoReg),
     .MemWrite(MemWrite),
@@ -194,6 +196,6 @@ ControlUnit_SC ControlUnit(
 	 .PCMux(PCMux)
 );
 
-assign PCSrc = (zero & Branch) | JalFunct;
+assign PCSrc = ((zero & BranchEQ) | (~zero & BranchNE)) | JalFunct;
 
 endmodule

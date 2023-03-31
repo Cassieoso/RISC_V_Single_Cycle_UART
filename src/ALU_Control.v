@@ -48,17 +48,17 @@ always @*
             endcase
     end
 
-always @(ALUOp)
+always @*
     begin
         case (ALUOp)
             3'b000:
-                ALUControl <= 3'b010;
+                ALUControl = 3'b010;
             3'b001:
-                ALUControl <= 3'b110;
+                ALUControl = 3'b110;
             3'b010:
-                ALUControl <= ALUFunctions_o;
+                ALUControl = ALUFunctions_o;
             3'b011:
-                ALUControl <= 3'b011;
+                ALUControl = 3'b011;
         endcase
     end
 	 

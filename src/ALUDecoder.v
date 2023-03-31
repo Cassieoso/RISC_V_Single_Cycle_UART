@@ -1,6 +1,8 @@
 module ALUDecoder (
     input clk, rst,
+	 input [6:0] opCode,
     input [5:0]funct,
+	 input [6:0] funct7,
     input [1:0]ALUOp,
     output reg [2:0]ALUControl
     );
@@ -10,6 +12,7 @@ localparam SUB_FN  = 3'b001;
 localparam AND_FN  = 3'b010;
 localparam OR_FN   = 3'b011;
 localparam SLT_FN  = 3'b100;
+localparam R_Type = 7'b0110011;
 
 reg [2:0] ALUFunctions_o;
 
@@ -20,6 +23,9 @@ always @(posedge clk, posedge rst)
         else
             case (funct)
                 ADD_FN:
+						if((funct7 == 6'h01) & (opCode == R_Type))
+                    ALUFunctions_o <= 3'b101;
+						 else
                     ALUFunctions_o <= 3'b010;
                 SUB_FN:
                     ALUFunctions_o <= 3'b110;
