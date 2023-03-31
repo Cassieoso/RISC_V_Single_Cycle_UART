@@ -24,13 +24,18 @@ module RISC_V_Single_Cycle
 wire enable_WRITE;
 wire [31:0] HWDATA;
 wire [31:0] HADDR;
+wire [31:0] HADDR_Instr;
+//wire [31:0] HADDR_Data;
+wire [31:0] HADDR_Instr_decoded;
+//wire [31:0] HADDR_Data_decoded;
 wire [31:0] HADDR_decoded;
 wire enable_LEDS;
 wire enable_SWITCHES;
 wire enable_MemWrite;
 wire enable_SendTx;
 wire reset_UART_READY;
-wire [31:0] HRDATA_OUT;
+wire [31:0] HRDATA_OUT_Data;
+wire [31:0] HRDATA_OUT_Instr;
 wire [31:0] HWDATA_OUT;
 wire [31:0] HRDATA_IN_GPIO;
 wire [31:0] HRDATA_IN_INSTR_MEMORY;
@@ -44,11 +49,14 @@ RISC_V_Updated #(.LENGTH(32)) RISC_V_TOP(
     .clock(clk),
 	 .reset(reset),
 //	 .enable_WRITE(enable_WRITE),
-	 .HRDATA(HRDATA_OUT),
+	 .HRDATA_Instr(HRDATA_OUT_Instr),
+	 .HRDATA_Data(HRDATA_OUT_Data),
 //	 .ALUResult_Reg_w(HADDR),
 	 .RegisterFile_RD2_w(HWDATA),
 	 .MemWrite(MemWrite),
-	 .HADDR(HADDR)
+	 .HADDR(HADDR),
+	 .programCounter_Output(HADDR_Instr)
+//	 .ALU_Result(HADDR_Data)
 //	 .memoryAddress_decode_w(HADDR)
     );
 
@@ -57,6 +65,8 @@ RISC_V_Updated #(.LENGTH(32)) RISC_V_TOP(
 PCH PCH_TOP(
     .clk(clk),
 	 .reset(reset),
+//	 .HADDR_Instr(HADDR_Instr),
+//	 .HADDR_Data(HADDR_Data),
 	 .HADDR(HADDR),
 	 .MemWrite(MemWrite),
 	 .HRDATA_IN_GPIO(HRDATA_IN_GPIO),
@@ -73,9 +83,11 @@ PCH PCH_TOP(
 	 .enable_SendTx(enable_SendTx),
 	 .reset_UART_READY(reset_UART_READY),
 //	 .enable_WRITE(enable_WRITE),
-    .HRDATA_OUT(HRDATA_OUT)
+	 .HRDATA_OUT_Instr(HRDATA_OUT_Instr),
+    .HRDATA_OUT_Data(HRDATA_OUT_Data)
     );
-	 
+	
+
 Address_decode  #(.LENGTH(32)) Address_decode_TOP(
     .clock(clk),
     .reset(reset),
@@ -83,10 +95,26 @@ Address_decode  #(.LENGTH(32)) Address_decode_TOP(
     .D(HADDR),
     .Q(HADDR_decoded)     //It goes to PC Instr/Data Memory MUX
     );
+	 	
+Address_decode  #(.LENGTH(32)) Instr_Address_decode_TOP(
+    .clock(clk),
+    .reset(reset),
+    .enable(1'b1),                   //This enable has to come from FSM
+    .D(HADDR_Instr),
+    .Q(HADDR_Instr_decoded)     //It goes to PC Instr/Data Memory MUX
+    );
 	 
+//Address_decode  #(.LENGTH(32)) Data_Address_decode_TOP(
+//    .clock(clk),
+//    .reset(reset),
+//    .enable(1'b1),                   //This enable has to come from FSM
+//    .D(HADDR_Data),
+//    .Q(HADDR_Data_decoded)     //It goes to PC Instr/Data Memory MUX
+//    );
+//	 
 Instruction_Memory Instruction_Memory_TOP (
     .clk(clk),
-    .addr(HADDR_decoded),
+    .addr(HADDR_Instr_decoded),
     .data(HWDATA),
     .we(1'b0),
 	 .RD(HRDATA_IN_INSTR_MEMORY)

@@ -7,7 +7,7 @@ module PCH (
 	 input HRDATA_IN_UART_BUSY, HRDATA_IN_UART_READY,
 	 output reg enable_LEDS, enable_SWITCHES, enable_MemWrite, enable_SendTx, reset_UART_READY,
 //	 output reg enable_WRITE,
-    output reg [31:0] HRDATA_OUT, HWDATA_OUT
+    output reg [31:0] HRDATA_OUT_Instr,HRDATA_OUT_Data, HWDATA_OUT
     );
 
 	 
@@ -51,99 +51,112 @@ always @*
 
 always@*
     begin
-//		if(reset)
-//            HRDATA_OUT <= 32'b0;
-//        else
+		if(reset)
+			begin
+            HRDATA_OUT_Instr <= 32'b0;
+				HRDATA_OUT_Data <= 32'b0;
+				reset_UART_READY	= 1'b1;
+			end
+        else
 			case(pheripherals)
 				LEDS:
 				begin
-					enable_LEDS 		<= 1'b1;
-					enable_SWITCHES 	<= 1'b0;
-					enable_MemWrite	<= MemWrite;
-					enable_SendTx		<=	1'b0;
-					reset_UART_READY	<= 1'b0;
-					HRDATA_OUT <= 'h0;
-					HWDATA_OUT <= HWDATA_IN;
+					enable_LEDS 		= 1'b1;
+					enable_SWITCHES 	= 1'b0;
+					enable_MemWrite	= MemWrite;
+					enable_SendTx		=	1'b0;
+					reset_UART_READY	= 1'b0;
+					HRDATA_OUT_Instr = HRDATA_IN_INSTR_MEMORY;
+					HRDATA_OUT_Data = 'h0;
+					HWDATA_OUT = HWDATA_IN;
 				end
 				SWITCHES:
 				begin
-					enable_LEDS 		<= 1'b0;
-					enable_SWITCHES 	<= 1'b1;
-					enable_MemWrite	<= MemWrite;
-					enable_SendTx		<=	1'b0;
-					reset_UART_READY	<= 1'b0;
-					HRDATA_OUT <= HRDATA_IN_GPIO;
-					HWDATA_OUT <= 'h0;
+					enable_LEDS 		= 1'b0;
+					enable_SWITCHES 	= 1'b1;
+					enable_MemWrite	= MemWrite;
+					enable_SendTx		=	1'b0;
+					reset_UART_READY	= 1'b0;
+					HRDATA_OUT_Instr = HRDATA_IN_INSTR_MEMORY;
+					HRDATA_OUT_Data = HRDATA_IN_GPIO;
+					HWDATA_OUT = 'h0;
 				end
 				INSTR_MEMORY:
 				begin
-					enable_LEDS 				<= 1'b0;
-					enable_SWITCHES 			<= 1'b1;
-					enable_MemWrite			<= MemWrite;
-					enable_SendTx				<=	1'b0;
-					reset_UART_READY			<= 1'b0;
-					HRDATA_OUT <= HRDATA_IN_INSTR_MEMORY;
-					HWDATA_OUT <= 'h0;
+					enable_LEDS 				= 1'b0;
+					enable_SWITCHES 			= 1'b1;
+					enable_MemWrite			= MemWrite;
+					enable_SendTx				=	1'b0;
+					reset_UART_READY			= 1'b0;
+					HRDATA_OUT_Instr = HRDATA_IN_INSTR_MEMORY;
+					HRDATA_OUT_Data = 'h0;
+					HWDATA_OUT = 'h0;
 				end
 				DATA_MEMORY:
 				begin
-					enable_LEDS 				<= 1'b0;
-					enable_SWITCHES 			<= 1'b1;
-					enable_MemWrite			<= MemWrite;
-					enable_SendTx				<=	1'b0;
-					reset_UART_READY			<= 1'b0;
-					HRDATA_OUT <= HRDATA_IN_DATA_MEMORY;
-					HWDATA_OUT <= 'h0;
+					enable_LEDS 				= 1'b0;
+					enable_SWITCHES 			= 1'b1;
+					enable_MemWrite			= MemWrite;
+					enable_SendTx				=	1'b0;
+					reset_UART_READY			= 1'b0;
+					HRDATA_OUT_Instr = HRDATA_IN_INSTR_MEMORY;
+					HRDATA_OUT_Data = HRDATA_IN_DATA_MEMORY;
+					HWDATA_OUT = 'h0;
 				end
 				UART_TX:
 				begin
-					enable_LEDS 		<= 1'b0;
-					enable_SWITCHES 	<= 1'b1;
-					enable_MemWrite	<= MemWrite;
-					enable_SendTx		<=	1'b1;
-					reset_UART_READY	<= 1'b0;
-					HRDATA_OUT <= 'h0;
-					HWDATA_OUT <= HWDATA_IN;
+					enable_LEDS 		= 1'b0;
+					enable_SWITCHES 	= 1'b1;
+					enable_MemWrite	= MemWrite;
+					enable_SendTx		=	1'b1;
+					reset_UART_READY	= 1'b0;
+					HRDATA_OUT_Instr = HRDATA_IN_INSTR_MEMORY;
+					HRDATA_OUT_Data = 'h0;
+					HWDATA_OUT = HWDATA_IN;
 				end
 				UART_RX:
 				begin
-					enable_LEDS 		<= 1'b0;
-					enable_SWITCHES 	<= 1'b0;
-					enable_MemWrite	<= MemWrite;
-					enable_SendTx		<=	1'b0;
-					reset_UART_READY	<= 1'b1;
-					HRDATA_OUT <= {{24{1'b0}},HRDATA_IN_UART[7:0]};
-					HWDATA_OUT <= 'h0;
+					enable_LEDS 		= 1'b0;
+					enable_SWITCHES 	= 1'b0;
+					enable_MemWrite	= MemWrite;
+					enable_SendTx		=	1'b0;
+					reset_UART_READY	= 1'b1;
+					HRDATA_OUT_Instr = HRDATA_IN_INSTR_MEMORY;
+					HRDATA_OUT_Data = {{24{1'b0}},HRDATA_IN_UART[7:0]};
+					HWDATA_OUT = 'h0;
 				end
 				UART_BUSY:
 				begin
-					enable_LEDS 		<= 1'b0;
-					enable_SWITCHES 	<= 1'b0;
-					enable_MemWrite	<= MemWrite;
-					enable_SendTx		<=	1'b0;
-					reset_UART_READY	<= 1'b0;
-					HRDATA_OUT <= {{31{1'b0}},HRDATA_IN_UART_BUSY};
-					HWDATA_OUT <= HWDATA_IN;
+					enable_LEDS 		= 1'b0;
+					enable_SWITCHES 	= 1'b0;
+					enable_MemWrite	= MemWrite;
+					enable_SendTx		=	1'b0;
+					reset_UART_READY	= 1'b0;
+					HRDATA_OUT_Instr = HRDATA_IN_INSTR_MEMORY;
+					HRDATA_OUT_Data = {{31{1'b0}},HRDATA_IN_UART_BUSY};
+					HWDATA_OUT = HWDATA_IN;
 				end
 				UART_READY:
 				begin
-					enable_LEDS 		<= 1'b0;
-					enable_SWITCHES 	<= 1'b0;
-					enable_MemWrite	<= MemWrite;
-					enable_SendTx		<=	1'b0;
-					reset_UART_READY	<= 1'b0;
-					HRDATA_OUT <= {{31{1'b0}},HRDATA_IN_UART_READY};
-					HWDATA_OUT <= 'h0;
+					enable_LEDS 		= 1'b0;
+					enable_SWITCHES 	= 1'b0;
+					enable_MemWrite	= MemWrite;
+					enable_SendTx		=	1'b0;
+					reset_UART_READY	= 1'b0;
+					HRDATA_OUT_Instr = HRDATA_IN_INSTR_MEMORY;
+					HRDATA_OUT_Data = {{31{1'b0}},HRDATA_IN_UART_READY};
+					HWDATA_OUT = 'h0;
 				end
 				default:
 				begin
-					enable_LEDS 		<= 1'b0;
-					enable_SWITCHES 	<= 1'b1;
-					enable_MemWrite	<= 1'b0;
-					enable_SendTx		<=	1'b0;
-					reset_UART_READY	<= 1'b1;
-					HRDATA_OUT <= 'h0;
-					HWDATA_OUT <= 'h0;
+					enable_LEDS 		= 1'b0;
+					enable_SWITCHES 	= 1'b1;
+					enable_MemWrite	= 1'b0;
+					enable_SendTx		=	1'b0;
+					reset_UART_READY	= 1'b1;
+					HRDATA_OUT_Instr = HRDATA_IN_INSTR_MEMORY;
+					HRDATA_OUT_Data = HRDATA_IN_DATA_MEMORY;
+					HWDATA_OUT = 'h0;
 				end
 			endcase
     end

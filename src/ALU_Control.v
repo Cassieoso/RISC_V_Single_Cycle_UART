@@ -48,7 +48,7 @@ always @*
             endcase
     end
 
-always @*
+always @(ALUOp)
     begin
         case (ALUOp)
             3'b000:
