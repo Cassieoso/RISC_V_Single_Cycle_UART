@@ -53,9 +53,14 @@ always@*
     begin
 		if(reset)
 			begin
-            HRDATA_OUT_Instr <= 32'b0;
-				HRDATA_OUT_Data <= 32'b0;
+            HRDATA_OUT_Instr = 32'b0;
+				HRDATA_OUT_Data = 32'b0;
 				reset_UART_READY	= 1'b1;
+				enable_LEDS = 1'b0;
+				enable_SWITCHES = 1'b0;
+				enable_MemWrite = 1'b0;
+				enable_SendTx = 1'b0;
+				HWDATA_OUT = 'h0;
 			end
         else
 			case(pheripherals)

@@ -43,12 +43,10 @@ set_global_assignment -name TOP_LEVEL_ENTITY RISC_V_Single_Cycle
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 21.1.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "19:12:28  MARCH 28, 2023"
 set_global_assignment -name LAST_QUARTUS_VERSION "21.1.1 Lite Edition"
-set_global_assignment -name VERILOG_FILE ../src/zeroExtend.v
 set_global_assignment -name VERILOG_FILE ../src/UART_TxRx.v
 set_global_assignment -name VERILOG_FILE ../src/UART_Tx.v
 set_global_assignment -name VERILOG_FILE ../src/UART_Rx_TB.v
 set_global_assignment -name VERILOG_FILE ../src/UART_Rx.v
-set_global_assignment -name VERILOG_FILE ../src/signExtend.v
 set_global_assignment -name VERILOG_FILE ../src/Shift_Register_R_Param_Rx.v
 set_global_assignment -name VERILOG_FILE ../src/Shift_Register_R_Param.v
 set_global_assignment -name VERILOG_FILE ../src/RISC_V_tb.v
@@ -83,7 +81,6 @@ set_global_assignment -name VERILOG_FILE ../src/debouncer.v
 set_global_assignment -name VERILOG_FILE ../src/Counter_Param.v
 set_global_assignment -name VERILOG_FILE ../src/Counter.v
 set_global_assignment -name VERILOG_FILE ../src/controlUnit.v
-set_global_assignment -name VERILOG_FILE ../src/clk_9600bauds.v
 set_global_assignment -name VERILOG_FILE ../src/clk_1Hz.v
 set_global_assignment -name VERILOG_FILE ../src/BranchAddress.v
 set_global_assignment -name VERILOG_FILE ../src/Bit_Rate_Pulse.v
@@ -101,10 +98,8 @@ set_global_assignment -name VERILOG_FILE ../src/RISC_V_Single_Cycle_tb.v
 set_global_assignment -name VERILOG_FILE ../src/Instruction_Memory.v
 set_global_assignment -name VERILOG_FILE ../src/Data_Memory.v
 set_global_assignment -name VERILOG_FILE ../src/Address_decode.v
-set_global_assignment -name VERILOG_FILE ../src/RISC_V_Updated.v
 set_global_assignment -name VERILOG_FILE ../src/Adder_param.v
 set_global_assignment -name VERILOG_FILE ../src/ALU_Control.v
-set_global_assignment -name VERILOG_FILE ../src/ControlUnit_SC.v
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top

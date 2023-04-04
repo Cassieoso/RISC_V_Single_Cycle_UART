@@ -45,7 +45,7 @@ wire HRDATA_IN_UART_BUSY;
 wire HRDATA_IN_UART_READY;
 
 
-RISC_V_Updated #(.LENGTH(32)) RISC_V_TOP(
+RISC_V #(.LENGTH(32)) RISC_V_TOP(
     .clock(clk),
 	 .reset(reset),
 //	 .enable_WRITE(enable_WRITE),

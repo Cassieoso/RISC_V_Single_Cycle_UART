@@ -1,224 +1,201 @@
 module RISC_V #(parameter LENGTH = 32)(
     input clock,reset,
-	 input [LENGTH-1:0] HRDATA,
+	 input [LENGTH-1:0] HRDATA_Instr, HRDATA_Data,
 	 output MemWrite,
-	 output [LENGTH-1:0] RegisterFile_RD2_reg_w,
-	 output [LENGTH-1:0] MUX1_Output_w
+	 output [LENGTH-1:0] RegisterFile_RD2_w, HADDR,
+	 output [LENGTH-1:0] programCounter_Output
+//	 output [LENGTH-1:0] ALU_Result
     );
-
 	 
-	 
-    wire [LENGTH-1:0]programCounter_Output_w; 
-    wire [LENGTH-1:0]InstructionData_Memory_RD_w;
-    wire [LENGTH-1:0]InstructionData_Memory_RD_Reg1_w;
-    wire [LENGTH-1:0]InstructionData_Memory_RD_Reg2_w;
-    wire [4:0] Mux_2in_1out_2_A3_w;
-    wire [LENGTH-1:0] Mux_2in_1out_3_WD3_w;
-    wire [LENGTH-1:0]RegisterFile_RD1_w;
-    wire [LENGTH-1:0]RegisterFile_RD2_w;
-    wire [LENGTH-1:0]RegisterFile_RD1_reg_w;
-    wire [31:0] Mux_2in_1out_4_SrcA_w;
-    wire [31:0] Mux_2in_1out_4_SrcB_w;
-    wire [LENGTH-1:0] signExtend_w;
-    wire [LENGTH-1:0] ALUResult_Reg_w;
-    wire [LENGTH-1:0] ALUResult_MUX_w;
-	 wire [LENGTH-1:0] ALU_Result;
-	 wire [LENGTH-1:0] immediate_w;
-	 wire [2:0] immediateSel;
-	 wire PCEn;
-	 wire zero;
-	 wire [LENGTH-1:0] Mux_2in_1out_3_WD_mux_w;
-	 
-//For controlUnit
-    wire [1:0] MemtoReg;
-    wire RegDst;
-    wire IorD;
-    wire PCSrc;
-    wire [1:0] ALUSrcB;
-    wire ALUSrcA;
-    wire IRWrite;
-//    wire MemWrite;
-    wire PCWrite;
-    wire RegWrite;
-    wire [2:0]ALUControl;
-	 wire BranchEQ;
-	 wire BranchNE;
+//wire [LENGTH-1:0] programCounter_Output;
+wire [LENGTH-1:0] programCounter_Output_mux;
+wire [LENGTH-1:0] programCounter_Output_mux2;
+wire [LENGTH-1:0] programCounter_Output_normal;
+wire [LENGTH-1:0] programCounter_Output_branch;
+wire [LENGTH-1:0] programCounter_Output_JALR;
+wire [LENGTH-1:0] immediate_w;
+wire [LENGTH-1:0] ALU_Out;
+wire [LENGTH-1:0] RegisterFile_RD1_w;
+//wire [LENGTH-1:0] RegisterFile_RD2_w;
+wire [LENGTH-1:0] RD2_Imm_mux_w;
+wire [LENGTH-1:0] RD1_PC_mux_w;
+wire [LENGTH-1:0] ALU_Result;
+wire [LENGTH-1:0] ALU_DataMem_mux;
+wire [2:0] immediateSel;
+wire PCSrc;
+wire HADDR_Sel;
+wire ALUSrcA;
+wire [1:0] ALUSrcB;
+wire [2:0] ALUOp;
+wire [2:0] ALUControl;
+wire zero;
+wire MemtoReg;
+wire RegDst;
+wire [4:0] RegisterFile_A3_w;
+wire BranchEQ;
+wire BranchNE;
+wire MemRead;
+wire RegWrite;
+wire JalFunct;
+wire PCMUx;
 
 
-programCounter  #(.LENGTH(LENGTH)) programCounter_TOP(
+programCounter  #(.LENGTH(LENGTH)) programCounter_TOP( //PC
     .clock(clock),
     .reset(reset),
-    .enable(PCEn),                   //This enable has to come from FSM
-    .D(ALUResult_MUX_w),
-    .Q(programCounter_Output_w)     //It goes to PC Instr/Data Memory MUX
-    );
-
-Mux_2in_1out #(.LENGTH(LENGTH)) Mux_2in_1out_1(       //Mux to ProgramCounter and InstructionDataMemory
-    .clk(clock),
-    .rst(reset),
-    .enable(1'b1),                   //Does it have to be always enabled?
-    .A(programCounter_Output_w),
-    .B(ALUResult_Reg_w),             //This B has to come from ALU RESULT //Antes tenia ALUResult_Reg_w
-    .sel(IorD),                       //This sel has to come from FSM
-    .Q(MUX1_Output_w)
-    );
-
-register #(.LENGTH_v(LENGTH)) register_1(        //InstructionData_Memory RD
-    .clock(clock),
-    .reset(reset),
-    .enable(IRWrite),                          //This enable has to come from FSM
-    .D(HRDATA),
-    .Q(InstructionData_Memory_RD_Reg1_w)    //It goes to RegisterFile
-    );
-
-register #(.LENGTH_v(LENGTH)) register_2(       //InstructionData_Memory RD
-    .clock(clock),
-    .reset(reset),
-    .enable(1'b1),                          //Does it have to be always enabled?
-    .D(HRDATA),
-    .Q(InstructionData_Memory_RD_Reg2_w)    //It goes to MUX WD3
+    .enable(1'b1),
+    .D(programCounter_Output_mux2),
+    .Q(programCounter_Output)
     );
 	 
-Mux_2in_1out #(.LENGTH(5)) Mux_2in_1out_2(      //InstructionData_Memory RD to A3 RegisterFile
-    .clk(clock),
-    .rst(reset),
-    .enable(1'b1),                      //This enable has to come from FSM or Does it have to be always enabled?
-    .A(InstructionData_Memory_RD_Reg1_w[19:15]), //Cambio para RISC-V
-    .B(InstructionData_Memory_RD_Reg1_w[11:7]),    //Cambio para RISC-V                     
-    .sel(RegDst),                         //This sel has to come from FSM    
-    .Q(Mux_2in_1out_2_A3_w)
+ImmediateDecode ImmediateDecode_TOP( //Imm gen
+    .sel(immediateSel),
+    .instruction(HRDATA_Instr),
+    .immediate(immediate_w)
     );
+	 
+Adder_param #(.LENGTH(LENGTH)) Adder_param_PC( //Adder when there is no branches
+	.A(programCounter_Output),
+	.B('h4),
+	.Q(programCounter_Output_normal)
+);
 
-Mux_3in_1out #(.LENGTH(LENGTH)) Mux_3in_1out_1(    //InstructionData_Memory RD to WD3 RegisterFile
+Adder_param #(.LENGTH(LENGTH)) Adder_param_Branch( //Adder for branches
+	.A(programCounter_Output),
+	.B(immediate_w),
+	.Q(programCounter_Output_branch)
+);
+
+Adder_param #(.LENGTH(LENGTH)) Adder_param_JALR( //Adder for JALR functions
+	.A(RegisterFile_RD1_w),
+	.B(immediate_w),
+	.Q(programCounter_Output_JALR)
+);
+
+Mux_2in_1out #(.LENGTH(LENGTH)) Mux_2in_1out_1(       //Mux to ProgramCounter
     .clk(clock),
     .rst(reset),
-    .enable(1'b1),                      //This enable has to come from FSM or Does it have to be always enabled?
-    .A(ALUResult_Reg_w),             //This B has to come from ALU Out //Antes tenia ALUResult_Reg_w
-    .B(InstructionData_Memory_RD_Reg2_w),
-	 .C(programCounter_Output_w),
-    .sel(MemtoReg),                         //This sel has to come from FSM               
-    .Q(Mux_2in_1out_3_WD3_w)
+    .enable(1'b1),
+    .A(programCounter_Output_normal),
+    .B(programCounter_Output_branch),
+    .sel(PCSrc),
+    .Q(programCounter_Output_mux)
     );
-	
-RegisterFile #(.DATA_WIDTH(32), .ADDR_WIDTH(5))RegisterFile_TOP(
+	 
+Mux_2in_1out #(.LENGTH(LENGTH)) Mux_2in_1out_7(       //Mux to ProgramCounter with rs1+imm adder
+    .clk(clock),
+    .rst(reset),
+    .enable(1'b1),
+    .A(programCounter_Output_mux),
+    .B(programCounter_Output_JALR),
+    .sel(PCMux),
+    .Q(programCounter_Output_mux2)
+    );
+	 
+Mux_2in_1out #(.LENGTH(LENGTH)) Mux_2in_1out_2(       //Mux for HADDR
+    .clk(clock),
+    .rst(reset),
+    .enable(1'b1),
+    .A(programCounter_Output),
+    .B(ALU_Result),
+    .sel(HADDR_Sel),	//Y este selector debe venir de la control unit
+    .Q(HADDR)
+    );
+	 
+Mux_2in_1out #(.LENGTH(5)) Mux_2in_1out_5(       //Mux after data memory (final mux)
+    .clk(clock),
+    .rst(reset),
+    .enable(1'b1),
+    .A(HRDATA_Instr[19:15]),
+    .B(HRDATA_Instr[11:7]),
+    .sel(RegDst),
+    .Q(RegisterFile_A3_w)
+    );
+	 
+
+RegisterFile #(.DATA_WIDTH(LENGTH), .ADDR_WIDTH(5)) RegisterFile_TOP(
     .clk(clock),
     .reset(reset),
-    .A1(InstructionData_Memory_RD_Reg1_w[19:15]),
-    .A2(InstructionData_Memory_RD_Reg1_w[24:20]),
-    .A3(Mux_2in_1out_2_A3_w),
-    .WD3(Mux_2in_1out_3_WD3_w),
-    .WE3(RegWrite),                     //This WE3 has to come from FSM  
+    .A1(HRDATA_Instr[19:15]),
+    .A2(HRDATA_Instr[24:20]),
+    .A3(RegisterFile_A3_w),
+    .WD3(ALU_DataMem_mux),				//Debe venir del ultimo mux, aun no agregado
+    .WE3(RegWrite),	//Debe venir de la control unit
     .RD1(RegisterFile_RD1_w),                     
     .RD2(RegisterFile_RD2_w)
     );
 
-register #(.LENGTH_v(LENGTH)) register_3(       //RegisterFile RD1
-    .clock(clock),
-    .reset(reset),
-    .enable(1'b1),                      //Does it have to be always enabled?
-    .D(RegisterFile_RD1_w),
-    .Q(RegisterFile_RD1_reg_w)
+Mux_2in_1out #(.LENGTH(LENGTH)) Mux_2in_1out_6(       //Mux after data memory (final mux)
+    .clk(clock),
+    .rst(reset),
+    .enable(1'b1),
+    .A(programCounter_Output),
+    .B(RegisterFile_RD1_w),		//Todavia falta la ALU
+    .sel(ALUSrcA),	//Y este selector debe venir de la control unit
+    .Q(RD1_PC_mux_w)
     );
 
-register #(.LENGTH_v(LENGTH)) register_4(       //RegisterFile RD2
-    .clock(clock),
-    .reset(reset),
-    .enable(1'b1),                      //Does it have to be always enabled?
-    .D(RegisterFile_RD2_w),
-    .Q(RegisterFile_RD2_reg_w)
-    );
-
-signExtend signExtend_TOP(
-    .clock(clock),
-    .reset(reset),
-    .enable(1'b1),                      //Does it have to be always enabled?
-    .extend(InstructionData_Memory_RD_Reg1_w[15:0]),
-    .extended(signExtend_w)
-    );
-
-ImmediateDecode ImmediateDecode_TOP(
-    .sel(immediateSel),
-    .instruction(InstructionData_Memory_RD_Reg1_w[31:0]),
-    .immediate(immediate_w)
+Mux_4in_1out #(.LENGTH(LENGTH)) Mux_4in_1out_1(       //Mux ALU SRCB
+    .clk(clock),
+    .rst(reset),
+    .enable(1'b1),
+    .A(RegisterFile_RD2_w),
+    .B(immediate_w),		//Todavia falta la ALU
+	 .C('h4),
+    .sel(ALUSrcB),	//Y este selector debe venir de la control unit
+    .Q(RD2_Imm_mux_w)
     );
 	 
-
-Mux_2in_1out #(.LENGTH(LENGTH)) Mux_2in_1out_4(       //RegisterFile to ALU
-    .clk(clock),
-    .rst(reset),
-    .enable(1'b1),                    
-    .A(programCounter_Output_w),
-    .B(RegisterFile_RD1_reg_w),                         
-    .sel(ALUSrcA),                       //This sel has to come from FSM 
-    .Q(Mux_2in_1out_4_SrcA_w)
-    );
-
-Mux_4in_1out #(.LENGTH(LENGTH)) Mux_4in_1out(       
-    .clk(clock),
-    .rst(reset),
-    .enable(1'b1),                   
-    .A(RegisterFile_RD2_reg_w),
-    .B(32'h00000004),
-    .C(signExtend_w),                       //Sign Extender
-    .D(immediate_w),                       //??
-    .sel(ALUSrcB),                     //This sel has to come from FSM 
-    .Q(Mux_2in_1out_4_SrcB_w)
-    );
-
-register #(.LENGTH_v(LENGTH)) register_5(
-    .clock(clock),
-    .reset(reset),
-    .enable(1'b1),
-    .D(ALU_Result),                   //This D has to come from ALU
-    .Q(ALUResult_Reg_w)
-    );
-
-Mux_2in_1out #(.LENGTH(LENGTH)) Mux_2in_1out_5(       
-    .clk(clock),
-    .rst(reset),
-    .enable(1'b1),               //??
-    .A(ALU_Result),                   //This A has to come from ALU
-    .B(ALUResult_Reg_w),                         
-    .sel(PCSrc),                 //This sel has to come from FSM 
-    .Q(ALUResult_MUX_w)
+ALU_Control ALU_Control_TOP(
+	.rst(reset),
+	.ALUOp(ALUOp),		//Debe venir de la control unit
+	.funct(HRDATA_Instr[14:12]),
+	.funct7(HRDATA_Instr[31:25]),
+	.opCode(HRDATA_Instr[6:0]),
+	.ALUControl(ALUControl)
     );
 	 
 ALU #(.LENGTH(LENGTH)) ALU_TOP(       
     .clk(clock),
-    .ALU_Sel(ALUControl),               //??
-    .A(Mux_2in_1out_4_SrcA_w),                   //This A has to come from ALU
-    .B(Mux_2in_1out_4_SrcB_w),                         
-    .shamt(InstructionData_Memory_RD_Reg1_w[10:6]),                 //This sel has to come from FSM 
+    .ALU_Sel(ALUControl),
+    .A(RD1_PC_mux_w),
+    .B(RD2_Imm_mux_w),                         
+    .shamt(HRDATA_Instr[10:6]),
     .ALU_Out(ALU_Result),
 	 .zero(zero)
     );
-
-controlUnit controlUnit_TOP(
+	 
+Mux_2in_1out #(.LENGTH(LENGTH)) Mux_2in_1out_4(       //Mux after data memory (final mux)
     .clk(clock),
     .rst(reset),
-	 .opCode(InstructionData_Memory_RD_Reg1_w[6:0]), //Actualizado para RISC V
-    //Multiplexer Selects
-    .MemtoReg(MemtoReg),
-    .RegDst(RegDst),
-    .IorD(IorD),
-    .PCSrc(PCSrc),
-    .ALUSrcB(ALUSrcB),
-    .ALUSrcA(ALUSrcA),
-    //Register Enables
-    .IRWrite(IRWrite),
-    .MemWrite(MemWrite),
-    .PCWrite(PCWrite),
-    .RegWrite(RegWrite),
-	 .BranchEQ(BranchEQ),
-	 .BranchNE(BranchNE),
-	 .immediateSel(immediateSel),
-    //To ALU Decoder
-    .funct(InstructionData_Memory_RD_Reg1_w[14:12]), //Actualizado para RISC V
-	 .funct7(InstructionData_Memory_RD_Reg1_w[31:25]), //Actualizado para RISC V
-    .ALUControl(ALUControl)
+    .enable(1'b1),
+    .A(ALU_Result),
+    .B(HRDATA_Data),		//Todavia falta la ALU
+    .sel(MemtoReg),	//Y este selector debe venir de la control unit
+    .Q(ALU_DataMem_mux)
     );
 	 
-	 
-assign PCEn = ((zero & BranchEQ) | (~zero & BranchNE)) | PCWrite;
+ControlUnit ControlUnit(
+    .clk(clock),
+	 .rst(reset),
+    .opCode(HRDATA_Instr[6:0]),
+	 .funct(HRDATA_Instr[14:12]),
+	 .BranchEQ(BranchEQ),
+	 .BranchNE(BranchNE),
+	 .MemRead(MemRead),
+    .MemtoReg(MemtoReg),
+    .MemWrite(MemWrite),
+	 .ALUSrcA(ALUSrcA),
+	 .ALUSrcB(ALUSrcB),
+    .RegWrite(RegWrite),
+	 .HADDR_Sel(HADDR_Sel),
+	 .RegDst(RegDst),
+	 .immediateSel(immediateSel),
+    .ALUOp(ALUOp),
+	 .JalFunct(JalFunct),
+	 .PCMux(PCMux)
+);
+
+assign PCSrc = ((zero & BranchEQ) | (~zero & BranchNE)) | JalFunct;
 
 endmodule

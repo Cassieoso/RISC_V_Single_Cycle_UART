@@ -59,6 +59,8 @@ always @*
                 ALUControl = ALUFunctions_o;
             3'b011:
                 ALUControl = 3'b011;
+				default:
+					 ALUControl = 3'b010;
         endcase
     end
 	 
